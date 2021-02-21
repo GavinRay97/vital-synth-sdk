@@ -1,0 +1,30 @@
+{
+  "name": "vital-sdk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate-types": "ts-node ./src/utils/scripts/generate-types.ts"
+  },
+  "dependencies": {
+    "audio-buffer": "^4.0.4",
+    "glob": "^7.1.6",
+    "js-yaml": "^4.0.0",
+    "node-stream-zip": "^1.13.1",
+    "pcm-util": "^3.0.0",
+    "quicktype": "^15.0.258",
+    "typescript": "^4.1.5",
+    "wav": "^1.0.2",
+    "wavefile": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/js-yaml": "^4.0.0",
+    "@types/node": "^14.14.27",
+    "@types/wav": "^1.0.0",
+    "prettier": "^2.2.1",
+    "quicktype-core": "^6.0.69",
+    "quicktype-typescript-input": "^0.0.11",
+    "ts-node": "^9.1.1"
+  }
+}

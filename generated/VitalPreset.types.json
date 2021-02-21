@@ -1,0 +1,4299 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "VitalPreset": {
+            "title": "VitalPreset",
+            "type": "object",
+            "properties": {
+                "author": {
+                    "type": "string",
+                    "title": "author"
+                },
+                "comments": {
+                    "type": "string",
+                    "title": "comments"
+                },
+                "macro1": {
+                    "type": "string",
+                    "title": "macro1"
+                },
+                "macro2": {
+                    "type": "string",
+                    "title": "macro2"
+                },
+                "macro3": {
+                    "type": "string",
+                    "title": "macro3"
+                },
+                "macro4": {
+                    "type": "string",
+                    "title": "macro4"
+                },
+                "preset_style": {
+                    "$ref": "#/definitions/PresetStyle",
+                    "title": "preset_style"
+                },
+                "settings": {
+                    "$ref": "#/definitions/PresetSettings",
+                    "title": "settings"
+                },
+                "synth_version": {
+                    "type": "string",
+                    "title": "synth_version"
+                },
+                "preset_name": {
+                    "type": "string",
+                    "title": "preset_name"
+                }
+            },
+            "required": [
+                "author",
+                "comments",
+                "macro1",
+                "macro2",
+                "macro3",
+                "macro4",
+                "preset_style",
+                "settings",
+                "synth_version"
+            ]
+        },
+        "PresetStyle": {
+            "title": "PresetStyle",
+            "enum": [
+                "",
+                "Bass",
+                "Experiment",
+                "Keys",
+                "Lead",
+                "Pad",
+                "Percussion",
+                "SFX",
+                "Sequence",
+                "Template"
+            ],
+            "type": "string"
+        },
+        "PresetSettings": {
+            "title": "PresetSettings",
+            "type": "object",
+            "properties": {
+                "beats_per_minute": {
+                    "type": "number",
+                    "title": "beats_per_minute"
+                },
+                "bypass": {
+                    "type": "number",
+                    "title": "bypass"
+                },
+                "chorus_cutoff": {
+                    "type": "number",
+                    "title": "chorus_cutoff"
+                },
+                "chorus_delay_1": {
+                    "type": "number",
+                    "title": "chorus_delay_1"
+                },
+                "chorus_delay_2": {
+                    "type": "number",
+                    "title": "chorus_delay_2"
+                },
+                "chorus_dry_wet": {
+                    "type": "number",
+                    "title": "chorus_dry_wet"
+                },
+                "chorus_feedback": {
+                    "type": "number",
+                    "title": "chorus_feedback"
+                },
+                "chorus_frequency": {
+                    "type": "number",
+                    "title": "chorus_frequency"
+                },
+                "chorus_mod_depth": {
+                    "type": "number",
+                    "title": "chorus_mod_depth"
+                },
+                "chorus_on": {
+                    "type": "number",
+                    "title": "chorus_on"
+                },
+                "chorus_spread": {
+                    "type": "number",
+                    "title": "chorus_spread"
+                },
+                "chorus_sync": {
+                    "type": "number",
+                    "title": "chorus_sync"
+                },
+                "chorus_tempo": {
+                    "type": "number",
+                    "title": "chorus_tempo"
+                },
+                "chorus_voices": {
+                    "type": "number",
+                    "title": "chorus_voices"
+                },
+                "compressor_attack": {
+                    "type": "number",
+                    "title": "compressor_attack"
+                },
+                "compressor_band_gain": {
+                    "type": "number",
+                    "title": "compressor_band_gain"
+                },
+                "compressor_band_lower_ratio": {
+                    "type": "number",
+                    "title": "compressor_band_lower_ratio"
+                },
+                "compressor_band_lower_threshold": {
+                    "type": "number",
+                    "title": "compressor_band_lower_threshold"
+                },
+                "compressor_band_upper_ratio": {
+                    "type": "number",
+                    "title": "compressor_band_upper_ratio"
+                },
+                "compressor_band_upper_threshold": {
+                    "type": "number",
+                    "title": "compressor_band_upper_threshold"
+                },
+                "compressor_enabled_bands": {
+                    "type": "number",
+                    "title": "compressor_enabled_bands"
+                },
+                "compressor_high_gain": {
+                    "type": "number",
+                    "title": "compressor_high_gain"
+                },
+                "compressor_high_lower_ratio": {
+                    "type": "number",
+                    "title": "compressor_high_lower_ratio"
+                },
+                "compressor_high_lower_threshold": {
+                    "type": "number",
+                    "title": "compressor_high_lower_threshold"
+                },
+                "compressor_high_upper_ratio": {
+                    "type": "number",
+                    "title": "compressor_high_upper_ratio"
+                },
+                "compressor_high_upper_threshold": {
+                    "type": "number",
+                    "title": "compressor_high_upper_threshold"
+                },
+                "compressor_low_gain": {
+                    "type": "number",
+                    "title": "compressor_low_gain"
+                },
+                "compressor_low_lower_ratio": {
+                    "type": "number",
+                    "title": "compressor_low_lower_ratio"
+                },
+                "compressor_low_lower_threshold": {
+                    "type": "number",
+                    "title": "compressor_low_lower_threshold"
+                },
+                "compressor_low_upper_ratio": {
+                    "type": "number",
+                    "title": "compressor_low_upper_ratio"
+                },
+                "compressor_low_upper_threshold": {
+                    "type": "number",
+                    "title": "compressor_low_upper_threshold"
+                },
+                "compressor_mix": {
+                    "type": "number",
+                    "title": "compressor_mix"
+                },
+                "compressor_on": {
+                    "type": "number",
+                    "title": "compressor_on"
+                },
+                "compressor_release": {
+                    "type": "number",
+                    "title": "compressor_release"
+                },
+                "delay_aux_frequency": {
+                    "type": "number",
+                    "title": "delay_aux_frequency"
+                },
+                "delay_aux_sync": {
+                    "type": "number",
+                    "title": "delay_aux_sync"
+                },
+                "delay_aux_tempo": {
+                    "type": "number",
+                    "title": "delay_aux_tempo"
+                },
+                "delay_dry_wet": {
+                    "type": "number",
+                    "title": "delay_dry_wet"
+                },
+                "delay_feedback": {
+                    "type": "number",
+                    "title": "delay_feedback"
+                },
+                "delay_filter_cutoff": {
+                    "type": "number",
+                    "title": "delay_filter_cutoff"
+                },
+                "delay_filter_spread": {
+                    "type": "number",
+                    "title": "delay_filter_spread"
+                },
+                "delay_frequency": {
+                    "type": "number",
+                    "title": "delay_frequency"
+                },
+                "delay_on": {
+                    "type": "number",
+                    "title": "delay_on"
+                },
+                "delay_style": {
+                    "type": "number",
+                    "title": "delay_style"
+                },
+                "delay_sync": {
+                    "type": "number",
+                    "title": "delay_sync"
+                },
+                "delay_tempo": {
+                    "type": "number",
+                    "title": "delay_tempo"
+                },
+                "distortion_drive": {
+                    "type": "number",
+                    "title": "distortion_drive"
+                },
+                "distortion_filter_blend": {
+                    "type": "number",
+                    "title": "distortion_filter_blend"
+                },
+                "distortion_filter_cutoff": {
+                    "type": "number",
+                    "title": "distortion_filter_cutoff"
+                },
+                "distortion_filter_order": {
+                    "type": "number",
+                    "title": "distortion_filter_order"
+                },
+                "distortion_filter_resonance": {
+                    "type": "number",
+                    "title": "distortion_filter_resonance"
+                },
+                "distortion_mix": {
+                    "type": "number",
+                    "title": "distortion_mix"
+                },
+                "distortion_on": {
+                    "type": "number",
+                    "title": "distortion_on"
+                },
+                "distortion_type": {
+                    "type": "number",
+                    "title": "distortion_type"
+                },
+                "effect_chain_order": {
+                    "type": "number",
+                    "title": "effect_chain_order"
+                },
+                "env_1_attack": {
+                    "type": "number",
+                    "title": "env_1_attack"
+                },
+                "env_1_attack_power": {
+                    "type": "number",
+                    "title": "env_1_attack_power"
+                },
+                "env_1_decay": {
+                    "type": "number",
+                    "title": "env_1_decay"
+                },
+                "env_1_decay_power": {
+                    "type": "number",
+                    "title": "env_1_decay_power"
+                },
+                "env_1_delay": {
+                    "type": "number",
+                    "title": "env_1_delay"
+                },
+                "env_1_hold": {
+                    "type": "number",
+                    "title": "env_1_hold"
+                },
+                "env_1_release": {
+                    "type": "number",
+                    "title": "env_1_release"
+                },
+                "env_1_release_power": {
+                    "type": "number",
+                    "title": "env_1_release_power"
+                },
+                "env_1_sustain": {
+                    "type": "number",
+                    "title": "env_1_sustain"
+                },
+                "env_2_attack": {
+                    "type": "number",
+                    "title": "env_2_attack"
+                },
+                "env_2_attack_power": {
+                    "type": "number",
+                    "title": "env_2_attack_power"
+                },
+                "env_2_decay": {
+                    "type": "number",
+                    "title": "env_2_decay"
+                },
+                "env_2_decay_power": {
+                    "type": "number",
+                    "title": "env_2_decay_power"
+                },
+                "env_2_delay": {
+                    "type": "number",
+                    "title": "env_2_delay"
+                },
+                "env_2_hold": {
+                    "type": "number",
+                    "title": "env_2_hold"
+                },
+                "env_2_release": {
+                    "type": "number",
+                    "title": "env_2_release"
+                },
+                "env_2_release_power": {
+                    "type": "number",
+                    "title": "env_2_release_power"
+                },
+                "env_2_sustain": {
+                    "type": "number",
+                    "title": "env_2_sustain"
+                },
+                "env_3_attack": {
+                    "type": "number",
+                    "title": "env_3_attack"
+                },
+                "env_3_attack_power": {
+                    "type": "number",
+                    "title": "env_3_attack_power"
+                },
+                "env_3_decay": {
+                    "type": "number",
+                    "title": "env_3_decay"
+                },
+                "env_3_decay_power": {
+                    "type": "number",
+                    "title": "env_3_decay_power"
+                },
+                "env_3_delay": {
+                    "type": "number",
+                    "title": "env_3_delay"
+                },
+                "env_3_hold": {
+                    "type": "number",
+                    "title": "env_3_hold"
+                },
+                "env_3_release": {
+                    "type": "number",
+                    "title": "env_3_release"
+                },
+                "env_3_release_power": {
+                    "type": "number",
+                    "title": "env_3_release_power"
+                },
+                "env_3_sustain": {
+                    "type": "number",
+                    "title": "env_3_sustain"
+                },
+                "env_4_attack": {
+                    "type": "number",
+                    "title": "env_4_attack"
+                },
+                "env_4_attack_power": {
+                    "type": "number",
+                    "title": "env_4_attack_power"
+                },
+                "env_4_decay": {
+                    "type": "number",
+                    "title": "env_4_decay"
+                },
+                "env_4_decay_power": {
+                    "type": "number",
+                    "title": "env_4_decay_power"
+                },
+                "env_4_delay": {
+                    "type": "number",
+                    "title": "env_4_delay"
+                },
+                "env_4_hold": {
+                    "type": "number",
+                    "title": "env_4_hold"
+                },
+                "env_4_release": {
+                    "type": "number",
+                    "title": "env_4_release"
+                },
+                "env_4_release_power": {
+                    "type": "number",
+                    "title": "env_4_release_power"
+                },
+                "env_4_sustain": {
+                    "type": "number",
+                    "title": "env_4_sustain"
+                },
+                "env_5_attack": {
+                    "type": "number",
+                    "title": "env_5_attack"
+                },
+                "env_5_attack_power": {
+                    "type": "number",
+                    "title": "env_5_attack_power"
+                },
+                "env_5_decay": {
+                    "type": "number",
+                    "title": "env_5_decay"
+                },
+                "env_5_decay_power": {
+                    "type": "number",
+                    "title": "env_5_decay_power"
+                },
+                "env_5_delay": {
+                    "type": "number",
+                    "title": "env_5_delay"
+                },
+                "env_5_hold": {
+                    "type": "number",
+                    "title": "env_5_hold"
+                },
+                "env_5_release": {
+                    "type": "number",
+                    "title": "env_5_release"
+                },
+                "env_5_release_power": {
+                    "type": "number",
+                    "title": "env_5_release_power"
+                },
+                "env_5_sustain": {
+                    "type": "number",
+                    "title": "env_5_sustain"
+                },
+                "env_6_attack": {
+                    "type": "number",
+                    "title": "env_6_attack"
+                },
+                "env_6_attack_power": {
+                    "type": "number",
+                    "title": "env_6_attack_power"
+                },
+                "env_6_decay": {
+                    "type": "number",
+                    "title": "env_6_decay"
+                },
+                "env_6_decay_power": {
+                    "type": "number",
+                    "title": "env_6_decay_power"
+                },
+                "env_6_delay": {
+                    "type": "number",
+                    "title": "env_6_delay"
+                },
+                "env_6_hold": {
+                    "type": "number",
+                    "title": "env_6_hold"
+                },
+                "env_6_release": {
+                    "type": "number",
+                    "title": "env_6_release"
+                },
+                "env_6_release_power": {
+                    "type": "number",
+                    "title": "env_6_release_power"
+                },
+                "env_6_sustain": {
+                    "type": "number",
+                    "title": "env_6_sustain"
+                },
+                "eq_band_cutoff": {
+                    "type": "number",
+                    "title": "eq_band_cutoff"
+                },
+                "eq_band_gain": {
+                    "type": "number",
+                    "title": "eq_band_gain"
+                },
+                "eq_band_mode": {
+                    "type": "number",
+                    "title": "eq_band_mode"
+                },
+                "eq_band_resonance": {
+                    "type": "number",
+                    "title": "eq_band_resonance"
+                },
+                "eq_high_cutoff": {
+                    "type": "number",
+                    "title": "eq_high_cutoff"
+                },
+                "eq_high_gain": {
+                    "type": "number",
+                    "title": "eq_high_gain"
+                },
+                "eq_high_mode": {
+                    "type": "number",
+                    "title": "eq_high_mode"
+                },
+                "eq_high_resonance": {
+                    "type": "number",
+                    "title": "eq_high_resonance"
+                },
+                "eq_low_cutoff": {
+                    "type": "number",
+                    "title": "eq_low_cutoff"
+                },
+                "eq_low_gain": {
+                    "type": "number",
+                    "title": "eq_low_gain"
+                },
+                "eq_low_mode": {
+                    "type": "number",
+                    "title": "eq_low_mode"
+                },
+                "eq_low_resonance": {
+                    "type": "number",
+                    "title": "eq_low_resonance"
+                },
+                "eq_on": {
+                    "type": "number",
+                    "title": "eq_on"
+                },
+                "filter_1_blend": {
+                    "type": "number",
+                    "title": "filter_1_blend"
+                },
+                "filter_1_blend_transpose": {
+                    "type": "number",
+                    "title": "filter_1_blend_transpose"
+                },
+                "filter_1_cutoff": {
+                    "type": "number",
+                    "title": "filter_1_cutoff"
+                },
+                "filter_1_drive": {
+                    "type": "number",
+                    "title": "filter_1_drive"
+                },
+                "filter_1_filter_input": {
+                    "type": "number",
+                    "title": "filter_1_filter_input"
+                },
+                "filter_1_formant_resonance": {
+                    "type": "number",
+                    "title": "filter_1_formant_resonance"
+                },
+                "filter_1_formant_spread": {
+                    "type": "number",
+                    "title": "filter_1_formant_spread"
+                },
+                "filter_1_formant_transpose": {
+                    "type": "number",
+                    "title": "filter_1_formant_transpose"
+                },
+                "filter_1_formant_x": {
+                    "type": "number",
+                    "title": "filter_1_formant_x"
+                },
+                "filter_1_formant_y": {
+                    "type": "number",
+                    "title": "filter_1_formant_y"
+                },
+                "filter_1_keytrack": {
+                    "type": "number",
+                    "title": "filter_1_keytrack"
+                },
+                "filter_1_mix": {
+                    "type": "number",
+                    "title": "filter_1_mix"
+                },
+                "filter_1_model": {
+                    "type": "number",
+                    "title": "filter_1_model"
+                },
+                "filter_1_on": {
+                    "type": "number",
+                    "title": "filter_1_on"
+                },
+                "filter_1_resonance": {
+                    "type": "number",
+                    "title": "filter_1_resonance"
+                },
+                "filter_1_style": {
+                    "type": "number",
+                    "title": "filter_1_style"
+                },
+                "filter_2_blend": {
+                    "type": "number",
+                    "title": "filter_2_blend"
+                },
+                "filter_2_blend_transpose": {
+                    "type": "number",
+                    "title": "filter_2_blend_transpose"
+                },
+                "filter_2_cutoff": {
+                    "type": "number",
+                    "title": "filter_2_cutoff"
+                },
+                "filter_2_drive": {
+                    "type": "number",
+                    "title": "filter_2_drive"
+                },
+                "filter_2_filter_input": {
+                    "type": "number",
+                    "title": "filter_2_filter_input"
+                },
+                "filter_2_formant_resonance": {
+                    "type": "number",
+                    "title": "filter_2_formant_resonance"
+                },
+                "filter_2_formant_spread": {
+                    "type": "number",
+                    "title": "filter_2_formant_spread"
+                },
+                "filter_2_formant_transpose": {
+                    "type": "number",
+                    "title": "filter_2_formant_transpose"
+                },
+                "filter_2_formant_x": {
+                    "type": "number",
+                    "title": "filter_2_formant_x"
+                },
+                "filter_2_formant_y": {
+                    "type": "number",
+                    "title": "filter_2_formant_y"
+                },
+                "filter_2_keytrack": {
+                    "type": "number",
+                    "title": "filter_2_keytrack"
+                },
+                "filter_2_mix": {
+                    "type": "number",
+                    "title": "filter_2_mix"
+                },
+                "filter_2_model": {
+                    "type": "number",
+                    "title": "filter_2_model"
+                },
+                "filter_2_on": {
+                    "type": "number",
+                    "title": "filter_2_on"
+                },
+                "filter_2_resonance": {
+                    "type": "number",
+                    "title": "filter_2_resonance"
+                },
+                "filter_2_style": {
+                    "type": "number",
+                    "title": "filter_2_style"
+                },
+                "filter_fx_blend": {
+                    "type": "number",
+                    "title": "filter_fx_blend"
+                },
+                "filter_fx_blend_transpose": {
+                    "type": "number",
+                    "title": "filter_fx_blend_transpose"
+                },
+                "filter_fx_cutoff": {
+                    "type": "number",
+                    "title": "filter_fx_cutoff"
+                },
+                "filter_fx_drive": {
+                    "type": "number",
+                    "title": "filter_fx_drive"
+                },
+                "filter_fx_formant_resonance": {
+                    "type": "number",
+                    "title": "filter_fx_formant_resonance"
+                },
+                "filter_fx_formant_spread": {
+                    "type": "number",
+                    "title": "filter_fx_formant_spread"
+                },
+                "filter_fx_formant_transpose": {
+                    "type": "number",
+                    "title": "filter_fx_formant_transpose"
+                },
+                "filter_fx_formant_x": {
+                    "type": "number",
+                    "title": "filter_fx_formant_x"
+                },
+                "filter_fx_formant_y": {
+                    "type": "number",
+                    "title": "filter_fx_formant_y"
+                },
+                "filter_fx_keytrack": {
+                    "type": "number",
+                    "title": "filter_fx_keytrack"
+                },
+                "filter_fx_mix": {
+                    "type": "number",
+                    "title": "filter_fx_mix"
+                },
+                "filter_fx_model": {
+                    "type": "number",
+                    "title": "filter_fx_model"
+                },
+                "filter_fx_on": {
+                    "type": "number",
+                    "title": "filter_fx_on"
+                },
+                "filter_fx_resonance": {
+                    "type": "number",
+                    "title": "filter_fx_resonance"
+                },
+                "filter_fx_style": {
+                    "type": "number",
+                    "title": "filter_fx_style"
+                },
+                "flanger_center": {
+                    "type": "number",
+                    "title": "flanger_center"
+                },
+                "flanger_dry_wet": {
+                    "type": "number",
+                    "title": "flanger_dry_wet"
+                },
+                "flanger_feedback": {
+                    "type": "number",
+                    "title": "flanger_feedback"
+                },
+                "flanger_frequency": {
+                    "type": "number",
+                    "title": "flanger_frequency"
+                },
+                "flanger_mod_depth": {
+                    "type": "number",
+                    "title": "flanger_mod_depth"
+                },
+                "flanger_on": {
+                    "type": "number",
+                    "title": "flanger_on"
+                },
+                "flanger_phase_offset": {
+                    "type": "number",
+                    "title": "flanger_phase_offset"
+                },
+                "flanger_sync": {
+                    "type": "number",
+                    "title": "flanger_sync"
+                },
+                "flanger_tempo": {
+                    "type": "number",
+                    "title": "flanger_tempo"
+                },
+                "legato": {
+                    "type": "number",
+                    "title": "legato"
+                },
+                "lfo_1_delay_time": {
+                    "type": "number",
+                    "title": "lfo_1_delay_time"
+                },
+                "lfo_1_fade_time": {
+                    "type": "number",
+                    "title": "lfo_1_fade_time"
+                },
+                "lfo_1_frequency": {
+                    "type": "number",
+                    "title": "lfo_1_frequency"
+                },
+                "lfo_1_keytrack_transpose": {
+                    "type": "number",
+                    "title": "lfo_1_keytrack_transpose"
+                },
+                "lfo_1_keytrack_tune": {
+                    "type": "number",
+                    "title": "lfo_1_keytrack_tune"
+                },
+                "lfo_1_phase": {
+                    "type": "number",
+                    "title": "lfo_1_phase"
+                },
+                "lfo_1_smooth_mode": {
+                    "type": "number",
+                    "title": "lfo_1_smooth_mode"
+                },
+                "lfo_1_smooth_time": {
+                    "type": "number",
+                    "title": "lfo_1_smooth_time"
+                },
+                "lfo_1_stereo": {
+                    "type": "number",
+                    "title": "lfo_1_stereo"
+                },
+                "lfo_1_sync": {
+                    "type": "number",
+                    "title": "lfo_1_sync"
+                },
+                "lfo_1_sync_type": {
+                    "type": "number",
+                    "title": "lfo_1_sync_type"
+                },
+                "lfo_1_tempo": {
+                    "type": "number",
+                    "title": "lfo_1_tempo"
+                },
+                "lfo_2_delay_time": {
+                    "type": "number",
+                    "title": "lfo_2_delay_time"
+                },
+                "lfo_2_fade_time": {
+                    "type": "number",
+                    "title": "lfo_2_fade_time"
+                },
+                "lfo_2_frequency": {
+                    "type": "number",
+                    "title": "lfo_2_frequency"
+                },
+                "lfo_2_keytrack_transpose": {
+                    "type": "number",
+                    "title": "lfo_2_keytrack_transpose"
+                },
+                "lfo_2_keytrack_tune": {
+                    "type": "number",
+                    "title": "lfo_2_keytrack_tune"
+                },
+                "lfo_2_phase": {
+                    "type": "number",
+                    "title": "lfo_2_phase"
+                },
+                "lfo_2_smooth_mode": {
+                    "type": "number",
+                    "title": "lfo_2_smooth_mode"
+                },
+                "lfo_2_smooth_time": {
+                    "type": "number",
+                    "title": "lfo_2_smooth_time"
+                },
+                "lfo_2_stereo": {
+                    "type": "number",
+                    "title": "lfo_2_stereo"
+                },
+                "lfo_2_sync": {
+                    "type": "number",
+                    "title": "lfo_2_sync"
+                },
+                "lfo_2_sync_type": {
+                    "type": "number",
+                    "title": "lfo_2_sync_type"
+                },
+                "lfo_2_tempo": {
+                    "type": "number",
+                    "title": "lfo_2_tempo"
+                },
+                "lfo_3_delay_time": {
+                    "type": "number",
+                    "title": "lfo_3_delay_time"
+                },
+                "lfo_3_fade_time": {
+                    "type": "number",
+                    "title": "lfo_3_fade_time"
+                },
+                "lfo_3_frequency": {
+                    "type": "number",
+                    "title": "lfo_3_frequency"
+                },
+                "lfo_3_keytrack_transpose": {
+                    "type": "number",
+                    "title": "lfo_3_keytrack_transpose"
+                },
+                "lfo_3_keytrack_tune": {
+                    "type": "number",
+                    "title": "lfo_3_keytrack_tune"
+                },
+                "lfo_3_phase": {
+                    "type": "number",
+                    "title": "lfo_3_phase"
+                },
+                "lfo_3_smooth_mode": {
+                    "type": "number",
+                    "title": "lfo_3_smooth_mode"
+                },
+                "lfo_3_smooth_time": {
+                    "type": "number",
+                    "title": "lfo_3_smooth_time"
+                },
+                "lfo_3_stereo": {
+                    "type": "number",
+                    "title": "lfo_3_stereo"
+                },
+                "lfo_3_sync": {
+                    "type": "number",
+                    "title": "lfo_3_sync"
+                },
+                "lfo_3_sync_type": {
+                    "type": "number",
+                    "title": "lfo_3_sync_type"
+                },
+                "lfo_3_tempo": {
+                    "type": "number",
+                    "title": "lfo_3_tempo"
+                },
+                "lfo_4_delay_time": {
+                    "type": "number",
+                    "title": "lfo_4_delay_time"
+                },
+                "lfo_4_fade_time": {
+                    "type": "number",
+                    "title": "lfo_4_fade_time"
+                },
+                "lfo_4_frequency": {
+                    "type": "number",
+                    "title": "lfo_4_frequency"
+                },
+                "lfo_4_keytrack_transpose": {
+                    "type": "number",
+                    "title": "lfo_4_keytrack_transpose"
+                },
+                "lfo_4_keytrack_tune": {
+                    "type": "number",
+                    "title": "lfo_4_keytrack_tune"
+                },
+                "lfo_4_phase": {
+                    "type": "number",
+                    "title": "lfo_4_phase"
+                },
+                "lfo_4_smooth_mode": {
+                    "type": "number",
+                    "title": "lfo_4_smooth_mode"
+                },
+                "lfo_4_smooth_time": {
+                    "type": "number",
+                    "title": "lfo_4_smooth_time"
+                },
+                "lfo_4_stereo": {
+                    "type": "number",
+                    "title": "lfo_4_stereo"
+                },
+                "lfo_4_sync": {
+                    "type": "number",
+                    "title": "lfo_4_sync"
+                },
+                "lfo_4_sync_type": {
+                    "type": "number",
+                    "title": "lfo_4_sync_type"
+                },
+                "lfo_4_tempo": {
+                    "type": "number",
+                    "title": "lfo_4_tempo"
+                },
+                "lfo_5_delay_time": {
+                    "type": "number",
+                    "title": "lfo_5_delay_time"
+                },
+                "lfo_5_fade_time": {
+                    "type": "number",
+                    "title": "lfo_5_fade_time"
+                },
+                "lfo_5_frequency": {
+                    "type": "number",
+                    "title": "lfo_5_frequency"
+                },
+                "lfo_5_keytrack_transpose": {
+                    "type": "number",
+                    "title": "lfo_5_keytrack_transpose"
+                },
+                "lfo_5_keytrack_tune": {
+                    "type": "number",
+                    "title": "lfo_5_keytrack_tune"
+                },
+                "lfo_5_phase": {
+                    "type": "number",
+                    "title": "lfo_5_phase"
+                },
+                "lfo_5_smooth_mode": {
+                    "type": "number",
+                    "title": "lfo_5_smooth_mode"
+                },
+                "lfo_5_smooth_time": {
+                    "type": "number",
+                    "title": "lfo_5_smooth_time"
+                },
+                "lfo_5_stereo": {
+                    "type": "number",
+                    "title": "lfo_5_stereo"
+                },
+                "lfo_5_sync": {
+                    "type": "number",
+                    "title": "lfo_5_sync"
+                },
+                "lfo_5_sync_type": {
+                    "type": "number",
+                    "title": "lfo_5_sync_type"
+                },
+                "lfo_5_tempo": {
+                    "type": "number",
+                    "title": "lfo_5_tempo"
+                },
+                "lfo_6_delay_time": {
+                    "type": "number",
+                    "title": "lfo_6_delay_time"
+                },
+                "lfo_6_fade_time": {
+                    "type": "number",
+                    "title": "lfo_6_fade_time"
+                },
+                "lfo_6_frequency": {
+                    "type": "number",
+                    "title": "lfo_6_frequency"
+                },
+                "lfo_6_keytrack_transpose": {
+                    "type": "number",
+                    "title": "lfo_6_keytrack_transpose"
+                },
+                "lfo_6_keytrack_tune": {
+                    "type": "number",
+                    "title": "lfo_6_keytrack_tune"
+                },
+                "lfo_6_phase": {
+                    "type": "number",
+                    "title": "lfo_6_phase"
+                },
+                "lfo_6_smooth_mode": {
+                    "type": "number",
+                    "title": "lfo_6_smooth_mode"
+                },
+                "lfo_6_smooth_time": {
+                    "type": "number",
+                    "title": "lfo_6_smooth_time"
+                },
+                "lfo_6_stereo": {
+                    "type": "number",
+                    "title": "lfo_6_stereo"
+                },
+                "lfo_6_sync": {
+                    "type": "number",
+                    "title": "lfo_6_sync"
+                },
+                "lfo_6_sync_type": {
+                    "type": "number",
+                    "title": "lfo_6_sync_type"
+                },
+                "lfo_6_tempo": {
+                    "type": "number",
+                    "title": "lfo_6_tempo"
+                },
+                "lfo_7_delay_time": {
+                    "type": "number",
+                    "title": "lfo_7_delay_time"
+                },
+                "lfo_7_fade_time": {
+                    "type": "number",
+                    "title": "lfo_7_fade_time"
+                },
+                "lfo_7_frequency": {
+                    "type": "number",
+                    "title": "lfo_7_frequency"
+                },
+                "lfo_7_keytrack_transpose": {
+                    "type": "number",
+                    "title": "lfo_7_keytrack_transpose"
+                },
+                "lfo_7_keytrack_tune": {
+                    "type": "number",
+                    "title": "lfo_7_keytrack_tune"
+                },
+                "lfo_7_phase": {
+                    "type": "number",
+                    "title": "lfo_7_phase"
+                },
+                "lfo_7_smooth_mode": {
+                    "type": "number",
+                    "title": "lfo_7_smooth_mode"
+                },
+                "lfo_7_smooth_time": {
+                    "type": "number",
+                    "title": "lfo_7_smooth_time"
+                },
+                "lfo_7_stereo": {
+                    "type": "number",
+                    "title": "lfo_7_stereo"
+                },
+                "lfo_7_sync": {
+                    "type": "number",
+                    "title": "lfo_7_sync"
+                },
+                "lfo_7_sync_type": {
+                    "type": "number",
+                    "title": "lfo_7_sync_type"
+                },
+                "lfo_7_tempo": {
+                    "type": "number",
+                    "title": "lfo_7_tempo"
+                },
+                "lfo_8_delay_time": {
+                    "type": "number",
+                    "title": "lfo_8_delay_time"
+                },
+                "lfo_8_fade_time": {
+                    "type": "number",
+                    "title": "lfo_8_fade_time"
+                },
+                "lfo_8_frequency": {
+                    "type": "number",
+                    "title": "lfo_8_frequency"
+                },
+                "lfo_8_keytrack_transpose": {
+                    "type": "number",
+                    "title": "lfo_8_keytrack_transpose"
+                },
+                "lfo_8_keytrack_tune": {
+                    "type": "number",
+                    "title": "lfo_8_keytrack_tune"
+                },
+                "lfo_8_phase": {
+                    "type": "number",
+                    "title": "lfo_8_phase"
+                },
+                "lfo_8_smooth_mode": {
+                    "type": "number",
+                    "title": "lfo_8_smooth_mode"
+                },
+                "lfo_8_smooth_time": {
+                    "type": "number",
+                    "title": "lfo_8_smooth_time"
+                },
+                "lfo_8_stereo": {
+                    "type": "number",
+                    "title": "lfo_8_stereo"
+                },
+                "lfo_8_sync": {
+                    "type": "number",
+                    "title": "lfo_8_sync"
+                },
+                "lfo_8_sync_type": {
+                    "type": "number",
+                    "title": "lfo_8_sync_type"
+                },
+                "lfo_8_tempo": {
+                    "type": "number",
+                    "title": "lfo_8_tempo"
+                },
+                "lfos": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LFO"
+                    },
+                    "title": "lfos"
+                },
+                "macro_control_1": {
+                    "type": "number",
+                    "title": "macro_control_1"
+                },
+                "macro_control_2": {
+                    "type": "number",
+                    "title": "macro_control_2"
+                },
+                "macro_control_3": {
+                    "type": "number",
+                    "title": "macro_control_3"
+                },
+                "macro_control_4": {
+                    "type": "number",
+                    "title": "macro_control_4"
+                },
+                "mod_wheel": {
+                    "type": "number",
+                    "title": "mod_wheel"
+                },
+                "modulation_10_amount": {
+                    "type": "number",
+                    "title": "modulation_10_amount"
+                },
+                "modulation_10_bipolar": {
+                    "type": "number",
+                    "title": "modulation_10_bipolar"
+                },
+                "modulation_10_bypass": {
+                    "type": "number",
+                    "title": "modulation_10_bypass"
+                },
+                "modulation_10_power": {
+                    "type": "number",
+                    "title": "modulation_10_power"
+                },
+                "modulation_10_stereo": {
+                    "type": "number",
+                    "title": "modulation_10_stereo"
+                },
+                "modulation_11_amount": {
+                    "type": "number",
+                    "title": "modulation_11_amount"
+                },
+                "modulation_11_bipolar": {
+                    "type": "number",
+                    "title": "modulation_11_bipolar"
+                },
+                "modulation_11_bypass": {
+                    "type": "number",
+                    "title": "modulation_11_bypass"
+                },
+                "modulation_11_power": {
+                    "type": "number",
+                    "title": "modulation_11_power"
+                },
+                "modulation_11_stereo": {
+                    "type": "number",
+                    "title": "modulation_11_stereo"
+                },
+                "modulation_12_amount": {
+                    "type": "number",
+                    "title": "modulation_12_amount"
+                },
+                "modulation_12_bipolar": {
+                    "type": "number",
+                    "title": "modulation_12_bipolar"
+                },
+                "modulation_12_bypass": {
+                    "type": "number",
+                    "title": "modulation_12_bypass"
+                },
+                "modulation_12_power": {
+                    "type": "number",
+                    "title": "modulation_12_power"
+                },
+                "modulation_12_stereo": {
+                    "type": "number",
+                    "title": "modulation_12_stereo"
+                },
+                "modulation_13_amount": {
+                    "type": "number",
+                    "title": "modulation_13_amount"
+                },
+                "modulation_13_bipolar": {
+                    "type": "number",
+                    "title": "modulation_13_bipolar"
+                },
+                "modulation_13_bypass": {
+                    "type": "number",
+                    "title": "modulation_13_bypass"
+                },
+                "modulation_13_power": {
+                    "type": "number",
+                    "title": "modulation_13_power"
+                },
+                "modulation_13_stereo": {
+                    "type": "number",
+                    "title": "modulation_13_stereo"
+                },
+                "modulation_14_amount": {
+                    "type": "number",
+                    "title": "modulation_14_amount"
+                },
+                "modulation_14_bipolar": {
+                    "type": "number",
+                    "title": "modulation_14_bipolar"
+                },
+                "modulation_14_bypass": {
+                    "type": "number",
+                    "title": "modulation_14_bypass"
+                },
+                "modulation_14_power": {
+                    "type": "number",
+                    "title": "modulation_14_power"
+                },
+                "modulation_14_stereo": {
+                    "type": "number",
+                    "title": "modulation_14_stereo"
+                },
+                "modulation_15_amount": {
+                    "type": "number",
+                    "title": "modulation_15_amount"
+                },
+                "modulation_15_bipolar": {
+                    "type": "number",
+                    "title": "modulation_15_bipolar"
+                },
+                "modulation_15_bypass": {
+                    "type": "number",
+                    "title": "modulation_15_bypass"
+                },
+                "modulation_15_power": {
+                    "type": "number",
+                    "title": "modulation_15_power"
+                },
+                "modulation_15_stereo": {
+                    "type": "number",
+                    "title": "modulation_15_stereo"
+                },
+                "modulation_16_amount": {
+                    "type": "number",
+                    "title": "modulation_16_amount"
+                },
+                "modulation_16_bipolar": {
+                    "type": "number",
+                    "title": "modulation_16_bipolar"
+                },
+                "modulation_16_bypass": {
+                    "type": "number",
+                    "title": "modulation_16_bypass"
+                },
+                "modulation_16_power": {
+                    "type": "number",
+                    "title": "modulation_16_power"
+                },
+                "modulation_16_stereo": {
+                    "type": "number",
+                    "title": "modulation_16_stereo"
+                },
+                "modulation_17_amount": {
+                    "type": "number",
+                    "title": "modulation_17_amount"
+                },
+                "modulation_17_bipolar": {
+                    "type": "number",
+                    "title": "modulation_17_bipolar"
+                },
+                "modulation_17_bypass": {
+                    "type": "number",
+                    "title": "modulation_17_bypass"
+                },
+                "modulation_17_power": {
+                    "type": "number",
+                    "title": "modulation_17_power"
+                },
+                "modulation_17_stereo": {
+                    "type": "number",
+                    "title": "modulation_17_stereo"
+                },
+                "modulation_18_amount": {
+                    "type": "number",
+                    "title": "modulation_18_amount"
+                },
+                "modulation_18_bipolar": {
+                    "type": "number",
+                    "title": "modulation_18_bipolar"
+                },
+                "modulation_18_bypass": {
+                    "type": "number",
+                    "title": "modulation_18_bypass"
+                },
+                "modulation_18_power": {
+                    "type": "number",
+                    "title": "modulation_18_power"
+                },
+                "modulation_18_stereo": {
+                    "type": "number",
+                    "title": "modulation_18_stereo"
+                },
+                "modulation_19_amount": {
+                    "type": "number",
+                    "title": "modulation_19_amount"
+                },
+                "modulation_19_bipolar": {
+                    "type": "number",
+                    "title": "modulation_19_bipolar"
+                },
+                "modulation_19_bypass": {
+                    "type": "number",
+                    "title": "modulation_19_bypass"
+                },
+                "modulation_19_power": {
+                    "type": "number",
+                    "title": "modulation_19_power"
+                },
+                "modulation_19_stereo": {
+                    "type": "number",
+                    "title": "modulation_19_stereo"
+                },
+                "modulation_1_amount": {
+                    "type": "number",
+                    "title": "modulation_1_amount"
+                },
+                "modulation_1_bipolar": {
+                    "type": "number",
+                    "title": "modulation_1_bipolar"
+                },
+                "modulation_1_bypass": {
+                    "type": "number",
+                    "title": "modulation_1_bypass"
+                },
+                "modulation_1_power": {
+                    "type": "number",
+                    "title": "modulation_1_power"
+                },
+                "modulation_1_stereo": {
+                    "type": "number",
+                    "title": "modulation_1_stereo"
+                },
+                "modulation_20_amount": {
+                    "type": "number",
+                    "title": "modulation_20_amount"
+                },
+                "modulation_20_bipolar": {
+                    "type": "number",
+                    "title": "modulation_20_bipolar"
+                },
+                "modulation_20_bypass": {
+                    "type": "number",
+                    "title": "modulation_20_bypass"
+                },
+                "modulation_20_power": {
+                    "type": "number",
+                    "title": "modulation_20_power"
+                },
+                "modulation_20_stereo": {
+                    "type": "number",
+                    "title": "modulation_20_stereo"
+                },
+                "modulation_21_amount": {
+                    "type": "number",
+                    "title": "modulation_21_amount"
+                },
+                "modulation_21_bipolar": {
+                    "type": "number",
+                    "title": "modulation_21_bipolar"
+                },
+                "modulation_21_bypass": {
+                    "type": "number",
+                    "title": "modulation_21_bypass"
+                },
+                "modulation_21_power": {
+                    "type": "number",
+                    "title": "modulation_21_power"
+                },
+                "modulation_21_stereo": {
+                    "type": "number",
+                    "title": "modulation_21_stereo"
+                },
+                "modulation_22_amount": {
+                    "type": "number",
+                    "title": "modulation_22_amount"
+                },
+                "modulation_22_bipolar": {
+                    "type": "number",
+                    "title": "modulation_22_bipolar"
+                },
+                "modulation_22_bypass": {
+                    "type": "number",
+                    "title": "modulation_22_bypass"
+                },
+                "modulation_22_power": {
+                    "type": "number",
+                    "title": "modulation_22_power"
+                },
+                "modulation_22_stereo": {
+                    "type": "number",
+                    "title": "modulation_22_stereo"
+                },
+                "modulation_23_amount": {
+                    "type": "number",
+                    "title": "modulation_23_amount"
+                },
+                "modulation_23_bipolar": {
+                    "type": "number",
+                    "title": "modulation_23_bipolar"
+                },
+                "modulation_23_bypass": {
+                    "type": "number",
+                    "title": "modulation_23_bypass"
+                },
+                "modulation_23_power": {
+                    "type": "number",
+                    "title": "modulation_23_power"
+                },
+                "modulation_23_stereo": {
+                    "type": "number",
+                    "title": "modulation_23_stereo"
+                },
+                "modulation_24_amount": {
+                    "type": "number",
+                    "title": "modulation_24_amount"
+                },
+                "modulation_24_bipolar": {
+                    "type": "number",
+                    "title": "modulation_24_bipolar"
+                },
+                "modulation_24_bypass": {
+                    "type": "number",
+                    "title": "modulation_24_bypass"
+                },
+                "modulation_24_power": {
+                    "type": "number",
+                    "title": "modulation_24_power"
+                },
+                "modulation_24_stereo": {
+                    "type": "number",
+                    "title": "modulation_24_stereo"
+                },
+                "modulation_25_amount": {
+                    "type": "number",
+                    "title": "modulation_25_amount"
+                },
+                "modulation_25_bipolar": {
+                    "type": "number",
+                    "title": "modulation_25_bipolar"
+                },
+                "modulation_25_bypass": {
+                    "type": "number",
+                    "title": "modulation_25_bypass"
+                },
+                "modulation_25_power": {
+                    "type": "number",
+                    "title": "modulation_25_power"
+                },
+                "modulation_25_stereo": {
+                    "type": "number",
+                    "title": "modulation_25_stereo"
+                },
+                "modulation_26_amount": {
+                    "type": "number",
+                    "title": "modulation_26_amount"
+                },
+                "modulation_26_bipolar": {
+                    "type": "number",
+                    "title": "modulation_26_bipolar"
+                },
+                "modulation_26_bypass": {
+                    "type": "number",
+                    "title": "modulation_26_bypass"
+                },
+                "modulation_26_power": {
+                    "type": "number",
+                    "title": "modulation_26_power"
+                },
+                "modulation_26_stereo": {
+                    "type": "number",
+                    "title": "modulation_26_stereo"
+                },
+                "modulation_27_amount": {
+                    "type": "number",
+                    "title": "modulation_27_amount"
+                },
+                "modulation_27_bipolar": {
+                    "type": "number",
+                    "title": "modulation_27_bipolar"
+                },
+                "modulation_27_bypass": {
+                    "type": "number",
+                    "title": "modulation_27_bypass"
+                },
+                "modulation_27_power": {
+                    "type": "number",
+                    "title": "modulation_27_power"
+                },
+                "modulation_27_stereo": {
+                    "type": "number",
+                    "title": "modulation_27_stereo"
+                },
+                "modulation_28_amount": {
+                    "type": "number",
+                    "title": "modulation_28_amount"
+                },
+                "modulation_28_bipolar": {
+                    "type": "number",
+                    "title": "modulation_28_bipolar"
+                },
+                "modulation_28_bypass": {
+                    "type": "number",
+                    "title": "modulation_28_bypass"
+                },
+                "modulation_28_power": {
+                    "type": "number",
+                    "title": "modulation_28_power"
+                },
+                "modulation_28_stereo": {
+                    "type": "number",
+                    "title": "modulation_28_stereo"
+                },
+                "modulation_29_amount": {
+                    "type": "number",
+                    "title": "modulation_29_amount"
+                },
+                "modulation_29_bipolar": {
+                    "type": "number",
+                    "title": "modulation_29_bipolar"
+                },
+                "modulation_29_bypass": {
+                    "type": "number",
+                    "title": "modulation_29_bypass"
+                },
+                "modulation_29_power": {
+                    "type": "number",
+                    "title": "modulation_29_power"
+                },
+                "modulation_29_stereo": {
+                    "type": "number",
+                    "title": "modulation_29_stereo"
+                },
+                "modulation_2_amount": {
+                    "type": "number",
+                    "title": "modulation_2_amount"
+                },
+                "modulation_2_bipolar": {
+                    "type": "number",
+                    "title": "modulation_2_bipolar"
+                },
+                "modulation_2_bypass": {
+                    "type": "number",
+                    "title": "modulation_2_bypass"
+                },
+                "modulation_2_power": {
+                    "type": "number",
+                    "title": "modulation_2_power"
+                },
+                "modulation_2_stereo": {
+                    "type": "number",
+                    "title": "modulation_2_stereo"
+                },
+                "modulation_30_amount": {
+                    "type": "number",
+                    "title": "modulation_30_amount"
+                },
+                "modulation_30_bipolar": {
+                    "type": "number",
+                    "title": "modulation_30_bipolar"
+                },
+                "modulation_30_bypass": {
+                    "type": "number",
+                    "title": "modulation_30_bypass"
+                },
+                "modulation_30_power": {
+                    "type": "number",
+                    "title": "modulation_30_power"
+                },
+                "modulation_30_stereo": {
+                    "type": "number",
+                    "title": "modulation_30_stereo"
+                },
+                "modulation_31_amount": {
+                    "type": "number",
+                    "title": "modulation_31_amount"
+                },
+                "modulation_31_bipolar": {
+                    "type": "number",
+                    "title": "modulation_31_bipolar"
+                },
+                "modulation_31_bypass": {
+                    "type": "number",
+                    "title": "modulation_31_bypass"
+                },
+                "modulation_31_power": {
+                    "type": "number",
+                    "title": "modulation_31_power"
+                },
+                "modulation_31_stereo": {
+                    "type": "number",
+                    "title": "modulation_31_stereo"
+                },
+                "modulation_32_amount": {
+                    "type": "number",
+                    "title": "modulation_32_amount"
+                },
+                "modulation_32_bipolar": {
+                    "type": "number",
+                    "title": "modulation_32_bipolar"
+                },
+                "modulation_32_bypass": {
+                    "type": "number",
+                    "title": "modulation_32_bypass"
+                },
+                "modulation_32_power": {
+                    "type": "number",
+                    "title": "modulation_32_power"
+                },
+                "modulation_32_stereo": {
+                    "type": "number",
+                    "title": "modulation_32_stereo"
+                },
+                "modulation_33_amount": {
+                    "type": "number",
+                    "title": "modulation_33_amount"
+                },
+                "modulation_33_bipolar": {
+                    "type": "number",
+                    "title": "modulation_33_bipolar"
+                },
+                "modulation_33_bypass": {
+                    "type": "number",
+                    "title": "modulation_33_bypass"
+                },
+                "modulation_33_power": {
+                    "type": "number",
+                    "title": "modulation_33_power"
+                },
+                "modulation_33_stereo": {
+                    "type": "number",
+                    "title": "modulation_33_stereo"
+                },
+                "modulation_34_amount": {
+                    "type": "number",
+                    "title": "modulation_34_amount"
+                },
+                "modulation_34_bipolar": {
+                    "type": "number",
+                    "title": "modulation_34_bipolar"
+                },
+                "modulation_34_bypass": {
+                    "type": "number",
+                    "title": "modulation_34_bypass"
+                },
+                "modulation_34_power": {
+                    "type": "number",
+                    "title": "modulation_34_power"
+                },
+                "modulation_34_stereo": {
+                    "type": "number",
+                    "title": "modulation_34_stereo"
+                },
+                "modulation_35_amount": {
+                    "type": "number",
+                    "title": "modulation_35_amount"
+                },
+                "modulation_35_bipolar": {
+                    "type": "number",
+                    "title": "modulation_35_bipolar"
+                },
+                "modulation_35_bypass": {
+                    "type": "number",
+                    "title": "modulation_35_bypass"
+                },
+                "modulation_35_power": {
+                    "type": "number",
+                    "title": "modulation_35_power"
+                },
+                "modulation_35_stereo": {
+                    "type": "number",
+                    "title": "modulation_35_stereo"
+                },
+                "modulation_36_amount": {
+                    "type": "number",
+                    "title": "modulation_36_amount"
+                },
+                "modulation_36_bipolar": {
+                    "type": "number",
+                    "title": "modulation_36_bipolar"
+                },
+                "modulation_36_bypass": {
+                    "type": "number",
+                    "title": "modulation_36_bypass"
+                },
+                "modulation_36_power": {
+                    "type": "number",
+                    "title": "modulation_36_power"
+                },
+                "modulation_36_stereo": {
+                    "type": "number",
+                    "title": "modulation_36_stereo"
+                },
+                "modulation_37_amount": {
+                    "type": "number",
+                    "title": "modulation_37_amount"
+                },
+                "modulation_37_bipolar": {
+                    "type": "number",
+                    "title": "modulation_37_bipolar"
+                },
+                "modulation_37_bypass": {
+                    "type": "number",
+                    "title": "modulation_37_bypass"
+                },
+                "modulation_37_power": {
+                    "type": "number",
+                    "title": "modulation_37_power"
+                },
+                "modulation_37_stereo": {
+                    "type": "number",
+                    "title": "modulation_37_stereo"
+                },
+                "modulation_38_amount": {
+                    "type": "number",
+                    "title": "modulation_38_amount"
+                },
+                "modulation_38_bipolar": {
+                    "type": "number",
+                    "title": "modulation_38_bipolar"
+                },
+                "modulation_38_bypass": {
+                    "type": "number",
+                    "title": "modulation_38_bypass"
+                },
+                "modulation_38_power": {
+                    "type": "number",
+                    "title": "modulation_38_power"
+                },
+                "modulation_38_stereo": {
+                    "type": "number",
+                    "title": "modulation_38_stereo"
+                },
+                "modulation_39_amount": {
+                    "type": "number",
+                    "title": "modulation_39_amount"
+                },
+                "modulation_39_bipolar": {
+                    "type": "number",
+                    "title": "modulation_39_bipolar"
+                },
+                "modulation_39_bypass": {
+                    "type": "number",
+                    "title": "modulation_39_bypass"
+                },
+                "modulation_39_power": {
+                    "type": "number",
+                    "title": "modulation_39_power"
+                },
+                "modulation_39_stereo": {
+                    "type": "number",
+                    "title": "modulation_39_stereo"
+                },
+                "modulation_3_amount": {
+                    "type": "number",
+                    "title": "modulation_3_amount"
+                },
+                "modulation_3_bipolar": {
+                    "type": "number",
+                    "title": "modulation_3_bipolar"
+                },
+                "modulation_3_bypass": {
+                    "type": "number",
+                    "title": "modulation_3_bypass"
+                },
+                "modulation_3_power": {
+                    "type": "number",
+                    "title": "modulation_3_power"
+                },
+                "modulation_3_stereo": {
+                    "type": "number",
+                    "title": "modulation_3_stereo"
+                },
+                "modulation_40_amount": {
+                    "type": "number",
+                    "title": "modulation_40_amount"
+                },
+                "modulation_40_bipolar": {
+                    "type": "number",
+                    "title": "modulation_40_bipolar"
+                },
+                "modulation_40_bypass": {
+                    "type": "number",
+                    "title": "modulation_40_bypass"
+                },
+                "modulation_40_power": {
+                    "type": "number",
+                    "title": "modulation_40_power"
+                },
+                "modulation_40_stereo": {
+                    "type": "number",
+                    "title": "modulation_40_stereo"
+                },
+                "modulation_41_amount": {
+                    "type": "number",
+                    "title": "modulation_41_amount"
+                },
+                "modulation_41_bipolar": {
+                    "type": "number",
+                    "title": "modulation_41_bipolar"
+                },
+                "modulation_41_bypass": {
+                    "type": "number",
+                    "title": "modulation_41_bypass"
+                },
+                "modulation_41_power": {
+                    "type": "number",
+                    "title": "modulation_41_power"
+                },
+                "modulation_41_stereo": {
+                    "type": "number",
+                    "title": "modulation_41_stereo"
+                },
+                "modulation_42_amount": {
+                    "type": "number",
+                    "title": "modulation_42_amount"
+                },
+                "modulation_42_bipolar": {
+                    "type": "number",
+                    "title": "modulation_42_bipolar"
+                },
+                "modulation_42_bypass": {
+                    "type": "number",
+                    "title": "modulation_42_bypass"
+                },
+                "modulation_42_power": {
+                    "type": "number",
+                    "title": "modulation_42_power"
+                },
+                "modulation_42_stereo": {
+                    "type": "number",
+                    "title": "modulation_42_stereo"
+                },
+                "modulation_43_amount": {
+                    "type": "number",
+                    "title": "modulation_43_amount"
+                },
+                "modulation_43_bipolar": {
+                    "type": "number",
+                    "title": "modulation_43_bipolar"
+                },
+                "modulation_43_bypass": {
+                    "type": "number",
+                    "title": "modulation_43_bypass"
+                },
+                "modulation_43_power": {
+                    "type": "number",
+                    "title": "modulation_43_power"
+                },
+                "modulation_43_stereo": {
+                    "type": "number",
+                    "title": "modulation_43_stereo"
+                },
+                "modulation_44_amount": {
+                    "type": "number",
+                    "title": "modulation_44_amount"
+                },
+                "modulation_44_bipolar": {
+                    "type": "number",
+                    "title": "modulation_44_bipolar"
+                },
+                "modulation_44_bypass": {
+                    "type": "number",
+                    "title": "modulation_44_bypass"
+                },
+                "modulation_44_power": {
+                    "type": "number",
+                    "title": "modulation_44_power"
+                },
+                "modulation_44_stereo": {
+                    "type": "number",
+                    "title": "modulation_44_stereo"
+                },
+                "modulation_45_amount": {
+                    "type": "number",
+                    "title": "modulation_45_amount"
+                },
+                "modulation_45_bipolar": {
+                    "type": "number",
+                    "title": "modulation_45_bipolar"
+                },
+                "modulation_45_bypass": {
+                    "type": "number",
+                    "title": "modulation_45_bypass"
+                },
+                "modulation_45_power": {
+                    "type": "number",
+                    "title": "modulation_45_power"
+                },
+                "modulation_45_stereo": {
+                    "type": "number",
+                    "title": "modulation_45_stereo"
+                },
+                "modulation_46_amount": {
+                    "type": "number",
+                    "title": "modulation_46_amount"
+                },
+                "modulation_46_bipolar": {
+                    "type": "number",
+                    "title": "modulation_46_bipolar"
+                },
+                "modulation_46_bypass": {
+                    "type": "number",
+                    "title": "modulation_46_bypass"
+                },
+                "modulation_46_power": {
+                    "type": "number",
+                    "title": "modulation_46_power"
+                },
+                "modulation_46_stereo": {
+                    "type": "number",
+                    "title": "modulation_46_stereo"
+                },
+                "modulation_47_amount": {
+                    "type": "number",
+                    "title": "modulation_47_amount"
+                },
+                "modulation_47_bipolar": {
+                    "type": "number",
+                    "title": "modulation_47_bipolar"
+                },
+                "modulation_47_bypass": {
+                    "type": "number",
+                    "title": "modulation_47_bypass"
+                },
+                "modulation_47_power": {
+                    "type": "number",
+                    "title": "modulation_47_power"
+                },
+                "modulation_47_stereo": {
+                    "type": "number",
+                    "title": "modulation_47_stereo"
+                },
+                "modulation_48_amount": {
+                    "type": "number",
+                    "title": "modulation_48_amount"
+                },
+                "modulation_48_bipolar": {
+                    "type": "number",
+                    "title": "modulation_48_bipolar"
+                },
+                "modulation_48_bypass": {
+                    "type": "number",
+                    "title": "modulation_48_bypass"
+                },
+                "modulation_48_power": {
+                    "type": "number",
+                    "title": "modulation_48_power"
+                },
+                "modulation_48_stereo": {
+                    "type": "number",
+                    "title": "modulation_48_stereo"
+                },
+                "modulation_49_amount": {
+                    "type": "number",
+                    "title": "modulation_49_amount"
+                },
+                "modulation_49_bipolar": {
+                    "type": "number",
+                    "title": "modulation_49_bipolar"
+                },
+                "modulation_49_bypass": {
+                    "type": "number",
+                    "title": "modulation_49_bypass"
+                },
+                "modulation_49_power": {
+                    "type": "number",
+                    "title": "modulation_49_power"
+                },
+                "modulation_49_stereo": {
+                    "type": "number",
+                    "title": "modulation_49_stereo"
+                },
+                "modulation_4_amount": {
+                    "type": "number",
+                    "title": "modulation_4_amount"
+                },
+                "modulation_4_bipolar": {
+                    "type": "number",
+                    "title": "modulation_4_bipolar"
+                },
+                "modulation_4_bypass": {
+                    "type": "number",
+                    "title": "modulation_4_bypass"
+                },
+                "modulation_4_power": {
+                    "type": "number",
+                    "title": "modulation_4_power"
+                },
+                "modulation_4_stereo": {
+                    "type": "number",
+                    "title": "modulation_4_stereo"
+                },
+                "modulation_50_amount": {
+                    "type": "number",
+                    "title": "modulation_50_amount"
+                },
+                "modulation_50_bipolar": {
+                    "type": "number",
+                    "title": "modulation_50_bipolar"
+                },
+                "modulation_50_bypass": {
+                    "type": "number",
+                    "title": "modulation_50_bypass"
+                },
+                "modulation_50_power": {
+                    "type": "number",
+                    "title": "modulation_50_power"
+                },
+                "modulation_50_stereo": {
+                    "type": "number",
+                    "title": "modulation_50_stereo"
+                },
+                "modulation_51_amount": {
+                    "type": "number",
+                    "title": "modulation_51_amount"
+                },
+                "modulation_51_bipolar": {
+                    "type": "number",
+                    "title": "modulation_51_bipolar"
+                },
+                "modulation_51_bypass": {
+                    "type": "number",
+                    "title": "modulation_51_bypass"
+                },
+                "modulation_51_power": {
+                    "type": "number",
+                    "title": "modulation_51_power"
+                },
+                "modulation_51_stereo": {
+                    "type": "number",
+                    "title": "modulation_51_stereo"
+                },
+                "modulation_52_amount": {
+                    "type": "number",
+                    "title": "modulation_52_amount"
+                },
+                "modulation_52_bipolar": {
+                    "type": "number",
+                    "title": "modulation_52_bipolar"
+                },
+                "modulation_52_bypass": {
+                    "type": "number",
+                    "title": "modulation_52_bypass"
+                },
+                "modulation_52_power": {
+                    "type": "number",
+                    "title": "modulation_52_power"
+                },
+                "modulation_52_stereo": {
+                    "type": "number",
+                    "title": "modulation_52_stereo"
+                },
+                "modulation_53_amount": {
+                    "type": "number",
+                    "title": "modulation_53_amount"
+                },
+                "modulation_53_bipolar": {
+                    "type": "number",
+                    "title": "modulation_53_bipolar"
+                },
+                "modulation_53_bypass": {
+                    "type": "number",
+                    "title": "modulation_53_bypass"
+                },
+                "modulation_53_power": {
+                    "type": "number",
+                    "title": "modulation_53_power"
+                },
+                "modulation_53_stereo": {
+                    "type": "number",
+                    "title": "modulation_53_stereo"
+                },
+                "modulation_54_amount": {
+                    "type": "number",
+                    "title": "modulation_54_amount"
+                },
+                "modulation_54_bipolar": {
+                    "type": "number",
+                    "title": "modulation_54_bipolar"
+                },
+                "modulation_54_bypass": {
+                    "type": "number",
+                    "title": "modulation_54_bypass"
+                },
+                "modulation_54_power": {
+                    "type": "number",
+                    "title": "modulation_54_power"
+                },
+                "modulation_54_stereo": {
+                    "type": "number",
+                    "title": "modulation_54_stereo"
+                },
+                "modulation_55_amount": {
+                    "type": "number",
+                    "title": "modulation_55_amount"
+                },
+                "modulation_55_bipolar": {
+                    "type": "number",
+                    "title": "modulation_55_bipolar"
+                },
+                "modulation_55_bypass": {
+                    "type": "number",
+                    "title": "modulation_55_bypass"
+                },
+                "modulation_55_power": {
+                    "type": "number",
+                    "title": "modulation_55_power"
+                },
+                "modulation_55_stereo": {
+                    "type": "number",
+                    "title": "modulation_55_stereo"
+                },
+                "modulation_56_amount": {
+                    "type": "number",
+                    "title": "modulation_56_amount"
+                },
+                "modulation_56_bipolar": {
+                    "type": "number",
+                    "title": "modulation_56_bipolar"
+                },
+                "modulation_56_bypass": {
+                    "type": "number",
+                    "title": "modulation_56_bypass"
+                },
+                "modulation_56_power": {
+                    "type": "number",
+                    "title": "modulation_56_power"
+                },
+                "modulation_56_stereo": {
+                    "type": "number",
+                    "title": "modulation_56_stereo"
+                },
+                "modulation_57_amount": {
+                    "type": "number",
+                    "title": "modulation_57_amount"
+                },
+                "modulation_57_bipolar": {
+                    "type": "number",
+                    "title": "modulation_57_bipolar"
+                },
+                "modulation_57_bypass": {
+                    "type": "number",
+                    "title": "modulation_57_bypass"
+                },
+                "modulation_57_power": {
+                    "type": "number",
+                    "title": "modulation_57_power"
+                },
+                "modulation_57_stereo": {
+                    "type": "number",
+                    "title": "modulation_57_stereo"
+                },
+                "modulation_58_amount": {
+                    "type": "number",
+                    "title": "modulation_58_amount"
+                },
+                "modulation_58_bipolar": {
+                    "type": "number",
+                    "title": "modulation_58_bipolar"
+                },
+                "modulation_58_bypass": {
+                    "type": "number",
+                    "title": "modulation_58_bypass"
+                },
+                "modulation_58_power": {
+                    "type": "number",
+                    "title": "modulation_58_power"
+                },
+                "modulation_58_stereo": {
+                    "type": "number",
+                    "title": "modulation_58_stereo"
+                },
+                "modulation_59_amount": {
+                    "type": "number",
+                    "title": "modulation_59_amount"
+                },
+                "modulation_59_bipolar": {
+                    "type": "number",
+                    "title": "modulation_59_bipolar"
+                },
+                "modulation_59_bypass": {
+                    "type": "number",
+                    "title": "modulation_59_bypass"
+                },
+                "modulation_59_power": {
+                    "type": "number",
+                    "title": "modulation_59_power"
+                },
+                "modulation_59_stereo": {
+                    "type": "number",
+                    "title": "modulation_59_stereo"
+                },
+                "modulation_5_amount": {
+                    "type": "number",
+                    "title": "modulation_5_amount"
+                },
+                "modulation_5_bipolar": {
+                    "type": "number",
+                    "title": "modulation_5_bipolar"
+                },
+                "modulation_5_bypass": {
+                    "type": "number",
+                    "title": "modulation_5_bypass"
+                },
+                "modulation_5_power": {
+                    "type": "number",
+                    "title": "modulation_5_power"
+                },
+                "modulation_5_stereo": {
+                    "type": "number",
+                    "title": "modulation_5_stereo"
+                },
+                "modulation_60_amount": {
+                    "type": "number",
+                    "title": "modulation_60_amount"
+                },
+                "modulation_60_bipolar": {
+                    "type": "number",
+                    "title": "modulation_60_bipolar"
+                },
+                "modulation_60_bypass": {
+                    "type": "number",
+                    "title": "modulation_60_bypass"
+                },
+                "modulation_60_power": {
+                    "type": "number",
+                    "title": "modulation_60_power"
+                },
+                "modulation_60_stereo": {
+                    "type": "number",
+                    "title": "modulation_60_stereo"
+                },
+                "modulation_61_amount": {
+                    "type": "number",
+                    "title": "modulation_61_amount"
+                },
+                "modulation_61_bipolar": {
+                    "type": "number",
+                    "title": "modulation_61_bipolar"
+                },
+                "modulation_61_bypass": {
+                    "type": "number",
+                    "title": "modulation_61_bypass"
+                },
+                "modulation_61_power": {
+                    "type": "number",
+                    "title": "modulation_61_power"
+                },
+                "modulation_61_stereo": {
+                    "type": "number",
+                    "title": "modulation_61_stereo"
+                },
+                "modulation_62_amount": {
+                    "type": "number",
+                    "title": "modulation_62_amount"
+                },
+                "modulation_62_bipolar": {
+                    "type": "number",
+                    "title": "modulation_62_bipolar"
+                },
+                "modulation_62_bypass": {
+                    "type": "number",
+                    "title": "modulation_62_bypass"
+                },
+                "modulation_62_power": {
+                    "type": "number",
+                    "title": "modulation_62_power"
+                },
+                "modulation_62_stereo": {
+                    "type": "number",
+                    "title": "modulation_62_stereo"
+                },
+                "modulation_63_amount": {
+                    "type": "number",
+                    "title": "modulation_63_amount"
+                },
+                "modulation_63_bipolar": {
+                    "type": "number",
+                    "title": "modulation_63_bipolar"
+                },
+                "modulation_63_bypass": {
+                    "type": "number",
+                    "title": "modulation_63_bypass"
+                },
+                "modulation_63_power": {
+                    "type": "number",
+                    "title": "modulation_63_power"
+                },
+                "modulation_63_stereo": {
+                    "type": "number",
+                    "title": "modulation_63_stereo"
+                },
+                "modulation_64_amount": {
+                    "type": "number",
+                    "title": "modulation_64_amount"
+                },
+                "modulation_64_bipolar": {
+                    "type": "number",
+                    "title": "modulation_64_bipolar"
+                },
+                "modulation_64_bypass": {
+                    "type": "number",
+                    "title": "modulation_64_bypass"
+                },
+                "modulation_64_power": {
+                    "type": "number",
+                    "title": "modulation_64_power"
+                },
+                "modulation_64_stereo": {
+                    "type": "number",
+                    "title": "modulation_64_stereo"
+                },
+                "modulation_6_amount": {
+                    "type": "number",
+                    "title": "modulation_6_amount"
+                },
+                "modulation_6_bipolar": {
+                    "type": "number",
+                    "title": "modulation_6_bipolar"
+                },
+                "modulation_6_bypass": {
+                    "type": "number",
+                    "title": "modulation_6_bypass"
+                },
+                "modulation_6_power": {
+                    "type": "number",
+                    "title": "modulation_6_power"
+                },
+                "modulation_6_stereo": {
+                    "type": "number",
+                    "title": "modulation_6_stereo"
+                },
+                "modulation_7_amount": {
+                    "type": "number",
+                    "title": "modulation_7_amount"
+                },
+                "modulation_7_bipolar": {
+                    "type": "number",
+                    "title": "modulation_7_bipolar"
+                },
+                "modulation_7_bypass": {
+                    "type": "number",
+                    "title": "modulation_7_bypass"
+                },
+                "modulation_7_power": {
+                    "type": "number",
+                    "title": "modulation_7_power"
+                },
+                "modulation_7_stereo": {
+                    "type": "number",
+                    "title": "modulation_7_stereo"
+                },
+                "modulation_8_amount": {
+                    "type": "number",
+                    "title": "modulation_8_amount"
+                },
+                "modulation_8_bipolar": {
+                    "type": "number",
+                    "title": "modulation_8_bipolar"
+                },
+                "modulation_8_bypass": {
+                    "type": "number",
+                    "title": "modulation_8_bypass"
+                },
+                "modulation_8_power": {
+                    "type": "number",
+                    "title": "modulation_8_power"
+                },
+                "modulation_8_stereo": {
+                    "type": "number",
+                    "title": "modulation_8_stereo"
+                },
+                "modulation_9_amount": {
+                    "type": "number",
+                    "title": "modulation_9_amount"
+                },
+                "modulation_9_bipolar": {
+                    "type": "number",
+                    "title": "modulation_9_bipolar"
+                },
+                "modulation_9_bypass": {
+                    "type": "number",
+                    "title": "modulation_9_bypass"
+                },
+                "modulation_9_power": {
+                    "type": "number",
+                    "title": "modulation_9_power"
+                },
+                "modulation_9_stereo": {
+                    "type": "number",
+                    "title": "modulation_9_stereo"
+                },
+                "modulations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Modulation"
+                    },
+                    "title": "modulations"
+                },
+                "osc_1_destination": {
+                    "type": "number",
+                    "title": "osc_1_destination"
+                },
+                "osc_1_detune_power": {
+                    "type": "number",
+                    "title": "osc_1_detune_power"
+                },
+                "osc_1_detune_range": {
+                    "type": "number",
+                    "title": "osc_1_detune_range"
+                },
+                "osc_1_distortion_amount": {
+                    "type": "number",
+                    "title": "osc_1_distortion_amount"
+                },
+                "osc_1_distortion_phase": {
+                    "type": "number",
+                    "title": "osc_1_distortion_phase"
+                },
+                "osc_1_distortion_spread": {
+                    "type": "number",
+                    "title": "osc_1_distortion_spread"
+                },
+                "osc_1_distortion_type": {
+                    "type": "number",
+                    "title": "osc_1_distortion_type"
+                },
+                "osc_1_frame_spread": {
+                    "type": "number",
+                    "title": "osc_1_frame_spread"
+                },
+                "osc_1_level": {
+                    "type": "number",
+                    "title": "osc_1_level"
+                },
+                "osc_1_midi_track": {
+                    "type": "number",
+                    "title": "osc_1_midi_track"
+                },
+                "osc_1_on": {
+                    "type": "number",
+                    "title": "osc_1_on"
+                },
+                "osc_1_pan": {
+                    "type": "number",
+                    "title": "osc_1_pan"
+                },
+                "osc_1_phase": {
+                    "type": "number",
+                    "title": "osc_1_phase"
+                },
+                "osc_1_random_phase": {
+                    "type": "number",
+                    "title": "osc_1_random_phase"
+                },
+                "osc_1_smooth_interpolation": {
+                    "type": "number",
+                    "title": "osc_1_smooth_interpolation"
+                },
+                "osc_1_spectral_morph_amount": {
+                    "type": "number",
+                    "title": "osc_1_spectral_morph_amount"
+                },
+                "osc_1_spectral_morph_spread": {
+                    "type": "number",
+                    "title": "osc_1_spectral_morph_spread"
+                },
+                "osc_1_spectral_morph_type": {
+                    "type": "number",
+                    "title": "osc_1_spectral_morph_type"
+                },
+                "osc_1_spectral_unison": {
+                    "type": "number",
+                    "title": "osc_1_spectral_unison"
+                },
+                "osc_1_stack_style": {
+                    "type": "number",
+                    "title": "osc_1_stack_style"
+                },
+                "osc_1_stereo_spread": {
+                    "type": "number",
+                    "title": "osc_1_stereo_spread"
+                },
+                "osc_1_transpose": {
+                    "type": "number",
+                    "title": "osc_1_transpose"
+                },
+                "osc_1_transpose_quantize": {
+                    "type": "number",
+                    "title": "osc_1_transpose_quantize"
+                },
+                "osc_1_tune": {
+                    "type": "number",
+                    "title": "osc_1_tune"
+                },
+                "osc_1_unison_blend": {
+                    "type": "number",
+                    "title": "osc_1_unison_blend"
+                },
+                "osc_1_unison_detune": {
+                    "type": "number",
+                    "title": "osc_1_unison_detune"
+                },
+                "osc_1_unison_voices": {
+                    "type": "number",
+                    "title": "osc_1_unison_voices"
+                },
+                "osc_1_view_2d": {
+                    "type": "number",
+                    "title": "osc_1_view_2d"
+                },
+                "osc_1_wave_frame": {
+                    "type": "number",
+                    "title": "osc_1_wave_frame"
+                },
+                "osc_2_destination": {
+                    "type": "number",
+                    "title": "osc_2_destination"
+                },
+                "osc_2_detune_power": {
+                    "type": "number",
+                    "title": "osc_2_detune_power"
+                },
+                "osc_2_detune_range": {
+                    "type": "number",
+                    "title": "osc_2_detune_range"
+                },
+                "osc_2_distortion_amount": {
+                    "type": "number",
+                    "title": "osc_2_distortion_amount"
+                },
+                "osc_2_distortion_phase": {
+                    "type": "number",
+                    "title": "osc_2_distortion_phase"
+                },
+                "osc_2_distortion_spread": {
+                    "type": "number",
+                    "title": "osc_2_distortion_spread"
+                },
+                "osc_2_distortion_type": {
+                    "type": "number",
+                    "title": "osc_2_distortion_type"
+                },
+                "osc_2_frame_spread": {
+                    "type": "number",
+                    "title": "osc_2_frame_spread"
+                },
+                "osc_2_level": {
+                    "type": "number",
+                    "title": "osc_2_level"
+                },
+                "osc_2_midi_track": {
+                    "type": "number",
+                    "title": "osc_2_midi_track"
+                },
+                "osc_2_on": {
+                    "type": "number",
+                    "title": "osc_2_on"
+                },
+                "osc_2_pan": {
+                    "type": "number",
+                    "title": "osc_2_pan"
+                },
+                "osc_2_phase": {
+                    "type": "number",
+                    "title": "osc_2_phase"
+                },
+                "osc_2_random_phase": {
+                    "type": "number",
+                    "title": "osc_2_random_phase"
+                },
+                "osc_2_smooth_interpolation": {
+                    "type": "number",
+                    "title": "osc_2_smooth_interpolation"
+                },
+                "osc_2_spectral_morph_amount": {
+                    "type": "number",
+                    "title": "osc_2_spectral_morph_amount"
+                },
+                "osc_2_spectral_morph_spread": {
+                    "type": "number",
+                    "title": "osc_2_spectral_morph_spread"
+                },
+                "osc_2_spectral_morph_type": {
+                    "type": "number",
+                    "title": "osc_2_spectral_morph_type"
+                },
+                "osc_2_spectral_unison": {
+                    "type": "number",
+                    "title": "osc_2_spectral_unison"
+                },
+                "osc_2_stack_style": {
+                    "type": "number",
+                    "title": "osc_2_stack_style"
+                },
+                "osc_2_stereo_spread": {
+                    "type": "number",
+                    "title": "osc_2_stereo_spread"
+                },
+                "osc_2_transpose": {
+                    "type": "number",
+                    "title": "osc_2_transpose"
+                },
+                "osc_2_transpose_quantize": {
+                    "type": "number",
+                    "title": "osc_2_transpose_quantize"
+                },
+                "osc_2_tune": {
+                    "type": "number",
+                    "title": "osc_2_tune"
+                },
+                "osc_2_unison_blend": {
+                    "type": "number",
+                    "title": "osc_2_unison_blend"
+                },
+                "osc_2_unison_detune": {
+                    "type": "number",
+                    "title": "osc_2_unison_detune"
+                },
+                "osc_2_unison_voices": {
+                    "type": "number",
+                    "title": "osc_2_unison_voices"
+                },
+                "osc_2_view_2d": {
+                    "type": "number",
+                    "title": "osc_2_view_2d"
+                },
+                "osc_2_wave_frame": {
+                    "type": "number",
+                    "title": "osc_2_wave_frame"
+                },
+                "osc_3_destination": {
+                    "type": "number",
+                    "title": "osc_3_destination"
+                },
+                "osc_3_detune_power": {
+                    "type": "number",
+                    "title": "osc_3_detune_power"
+                },
+                "osc_3_detune_range": {
+                    "type": "number",
+                    "title": "osc_3_detune_range"
+                },
+                "osc_3_distortion_amount": {
+                    "type": "number",
+                    "title": "osc_3_distortion_amount"
+                },
+                "osc_3_distortion_phase": {
+                    "type": "number",
+                    "title": "osc_3_distortion_phase"
+                },
+                "osc_3_distortion_spread": {
+                    "type": "number",
+                    "title": "osc_3_distortion_spread"
+                },
+                "osc_3_distortion_type": {
+                    "type": "number",
+                    "title": "osc_3_distortion_type"
+                },
+                "osc_3_frame_spread": {
+                    "type": "number",
+                    "title": "osc_3_frame_spread"
+                },
+                "osc_3_level": {
+                    "type": "number",
+                    "title": "osc_3_level"
+                },
+                "osc_3_midi_track": {
+                    "type": "number",
+                    "title": "osc_3_midi_track"
+                },
+                "osc_3_on": {
+                    "type": "number",
+                    "title": "osc_3_on"
+                },
+                "osc_3_pan": {
+                    "type": "number",
+                    "title": "osc_3_pan"
+                },
+                "osc_3_phase": {
+                    "type": "number",
+                    "title": "osc_3_phase"
+                },
+                "osc_3_random_phase": {
+                    "type": "number",
+                    "title": "osc_3_random_phase"
+                },
+                "osc_3_smooth_interpolation": {
+                    "type": "number",
+                    "title": "osc_3_smooth_interpolation"
+                },
+                "osc_3_spectral_morph_amount": {
+                    "type": "number",
+                    "title": "osc_3_spectral_morph_amount"
+                },
+                "osc_3_spectral_morph_spread": {
+                    "type": "number",
+                    "title": "osc_3_spectral_morph_spread"
+                },
+                "osc_3_spectral_morph_type": {
+                    "type": "number",
+                    "title": "osc_3_spectral_morph_type"
+                },
+                "osc_3_spectral_unison": {
+                    "type": "number",
+                    "title": "osc_3_spectral_unison"
+                },
+                "osc_3_stack_style": {
+                    "type": "number",
+                    "title": "osc_3_stack_style"
+                },
+                "osc_3_stereo_spread": {
+                    "type": "number",
+                    "title": "osc_3_stereo_spread"
+                },
+                "osc_3_transpose": {
+                    "type": "number",
+                    "title": "osc_3_transpose"
+                },
+                "osc_3_transpose_quantize": {
+                    "type": "number",
+                    "title": "osc_3_transpose_quantize"
+                },
+                "osc_3_tune": {
+                    "type": "number",
+                    "title": "osc_3_tune"
+                },
+                "osc_3_unison_blend": {
+                    "type": "number",
+                    "title": "osc_3_unison_blend"
+                },
+                "osc_3_unison_detune": {
+                    "type": "number",
+                    "title": "osc_3_unison_detune"
+                },
+                "osc_3_unison_voices": {
+                    "type": "number",
+                    "title": "osc_3_unison_voices"
+                },
+                "osc_3_view_2d": {
+                    "type": "number",
+                    "title": "osc_3_view_2d"
+                },
+                "osc_3_wave_frame": {
+                    "type": "number",
+                    "title": "osc_3_wave_frame"
+                },
+                "oversampling": {
+                    "type": "number",
+                    "title": "oversampling"
+                },
+                "phaser_blend": {
+                    "type": "number",
+                    "title": "phaser_blend"
+                },
+                "phaser_center": {
+                    "type": "number",
+                    "title": "phaser_center"
+                },
+                "phaser_dry_wet": {
+                    "type": "number",
+                    "title": "phaser_dry_wet"
+                },
+                "phaser_feedback": {
+                    "type": "number",
+                    "title": "phaser_feedback"
+                },
+                "phaser_frequency": {
+                    "type": "number",
+                    "title": "phaser_frequency"
+                },
+                "phaser_mod_depth": {
+                    "type": "number",
+                    "title": "phaser_mod_depth"
+                },
+                "phaser_on": {
+                    "type": "number",
+                    "title": "phaser_on"
+                },
+                "phaser_phase_offset": {
+                    "type": "number",
+                    "title": "phaser_phase_offset"
+                },
+                "phaser_sync": {
+                    "type": "number",
+                    "title": "phaser_sync"
+                },
+                "phaser_tempo": {
+                    "type": "number",
+                    "title": "phaser_tempo"
+                },
+                "pitch_bend_range": {
+                    "type": "number",
+                    "title": "pitch_bend_range"
+                },
+                "pitch_wheel": {
+                    "type": "number",
+                    "title": "pitch_wheel"
+                },
+                "polyphony": {
+                    "type": "number",
+                    "title": "polyphony"
+                },
+                "portamento_force": {
+                    "type": "number",
+                    "title": "portamento_force"
+                },
+                "portamento_scale": {
+                    "type": "number",
+                    "title": "portamento_scale"
+                },
+                "portamento_slope": {
+                    "type": "number",
+                    "title": "portamento_slope"
+                },
+                "portamento_time": {
+                    "type": "number",
+                    "title": "portamento_time"
+                },
+                "random_1_frequency": {
+                    "type": "number",
+                    "title": "random_1_frequency"
+                },
+                "random_1_keytrack_transpose": {
+                    "type": "number",
+                    "title": "random_1_keytrack_transpose"
+                },
+                "random_1_keytrack_tune": {
+                    "type": "number",
+                    "title": "random_1_keytrack_tune"
+                },
+                "random_1_stereo": {
+                    "type": "number",
+                    "title": "random_1_stereo"
+                },
+                "random_1_style": {
+                    "type": "number",
+                    "title": "random_1_style"
+                },
+                "random_1_sync": {
+                    "type": "number",
+                    "title": "random_1_sync"
+                },
+                "random_1_sync_type": {
+                    "type": "number",
+                    "title": "random_1_sync_type"
+                },
+                "random_1_tempo": {
+                    "type": "number",
+                    "title": "random_1_tempo"
+                },
+                "random_2_frequency": {
+                    "type": "number",
+                    "title": "random_2_frequency"
+                },
+                "random_2_keytrack_transpose": {
+                    "type": "number",
+                    "title": "random_2_keytrack_transpose"
+                },
+                "random_2_keytrack_tune": {
+                    "type": "number",
+                    "title": "random_2_keytrack_tune"
+                },
+                "random_2_stereo": {
+                    "type": "number",
+                    "title": "random_2_stereo"
+                },
+                "random_2_style": {
+                    "type": "number",
+                    "title": "random_2_style"
+                },
+                "random_2_sync": {
+                    "type": "number",
+                    "title": "random_2_sync"
+                },
+                "random_2_sync_type": {
+                    "type": "number",
+                    "title": "random_2_sync_type"
+                },
+                "random_2_tempo": {
+                    "type": "number",
+                    "title": "random_2_tempo"
+                },
+                "random_3_frequency": {
+                    "type": "number",
+                    "title": "random_3_frequency"
+                },
+                "random_3_keytrack_transpose": {
+                    "type": "number",
+                    "title": "random_3_keytrack_transpose"
+                },
+                "random_3_keytrack_tune": {
+                    "type": "number",
+                    "title": "random_3_keytrack_tune"
+                },
+                "random_3_stereo": {
+                    "type": "number",
+                    "title": "random_3_stereo"
+                },
+                "random_3_style": {
+                    "type": "number",
+                    "title": "random_3_style"
+                },
+                "random_3_sync": {
+                    "type": "number",
+                    "title": "random_3_sync"
+                },
+                "random_3_sync_type": {
+                    "type": "number",
+                    "title": "random_3_sync_type"
+                },
+                "random_3_tempo": {
+                    "type": "number",
+                    "title": "random_3_tempo"
+                },
+                "random_4_frequency": {
+                    "type": "number",
+                    "title": "random_4_frequency"
+                },
+                "random_4_keytrack_transpose": {
+                    "type": "number",
+                    "title": "random_4_keytrack_transpose"
+                },
+                "random_4_keytrack_tune": {
+                    "type": "number",
+                    "title": "random_4_keytrack_tune"
+                },
+                "random_4_stereo": {
+                    "type": "number",
+                    "title": "random_4_stereo"
+                },
+                "random_4_style": {
+                    "type": "number",
+                    "title": "random_4_style"
+                },
+                "random_4_sync": {
+                    "type": "number",
+                    "title": "random_4_sync"
+                },
+                "random_4_sync_type": {
+                    "type": "number",
+                    "title": "random_4_sync_type"
+                },
+                "random_4_tempo": {
+                    "type": "number",
+                    "title": "random_4_tempo"
+                },
+                "reverb_chorus_amount": {
+                    "type": "number",
+                    "title": "reverb_chorus_amount"
+                },
+                "reverb_chorus_frequency": {
+                    "type": "number",
+                    "title": "reverb_chorus_frequency"
+                },
+                "reverb_decay_time": {
+                    "type": "number",
+                    "title": "reverb_decay_time"
+                },
+                "reverb_delay": {
+                    "type": "number",
+                    "title": "reverb_delay"
+                },
+                "reverb_dry_wet": {
+                    "type": "number",
+                    "title": "reverb_dry_wet"
+                },
+                "reverb_high_shelf_cutoff": {
+                    "type": "number",
+                    "title": "reverb_high_shelf_cutoff"
+                },
+                "reverb_high_shelf_gain": {
+                    "type": "number",
+                    "title": "reverb_high_shelf_gain"
+                },
+                "reverb_low_shelf_cutoff": {
+                    "type": "number",
+                    "title": "reverb_low_shelf_cutoff"
+                },
+                "reverb_low_shelf_gain": {
+                    "type": "number",
+                    "title": "reverb_low_shelf_gain"
+                },
+                "reverb_on": {
+                    "type": "number",
+                    "title": "reverb_on"
+                },
+                "reverb_pre_high_cutoff": {
+                    "type": "number",
+                    "title": "reverb_pre_high_cutoff"
+                },
+                "reverb_pre_low_cutoff": {
+                    "type": "number",
+                    "title": "reverb_pre_low_cutoff"
+                },
+                "reverb_size": {
+                    "type": "number",
+                    "title": "reverb_size"
+                },
+                "sample": {
+                    "$ref": "#/definitions/Sample",
+                    "title": "sample"
+                },
+                "sample_bounce": {
+                    "type": "number",
+                    "title": "sample_bounce"
+                },
+                "sample_destination": {
+                    "type": "number",
+                    "title": "sample_destination"
+                },
+                "sample_keytrack": {
+                    "type": "number",
+                    "title": "sample_keytrack"
+                },
+                "sample_level": {
+                    "type": "number",
+                    "title": "sample_level"
+                },
+                "sample_loop": {
+                    "type": "number",
+                    "title": "sample_loop"
+                },
+                "sample_on": {
+                    "type": "number",
+                    "title": "sample_on"
+                },
+                "sample_pan": {
+                    "type": "number",
+                    "title": "sample_pan"
+                },
+                "sample_random_phase": {
+                    "type": "number",
+                    "title": "sample_random_phase"
+                },
+                "sample_transpose": {
+                    "type": "number",
+                    "title": "sample_transpose"
+                },
+                "sample_transpose_quantize": {
+                    "type": "number",
+                    "title": "sample_transpose_quantize"
+                },
+                "sample_tune": {
+                    "type": "number",
+                    "title": "sample_tune"
+                },
+                "stereo_mode": {
+                    "type": "number",
+                    "title": "stereo_mode"
+                },
+                "stereo_routing": {
+                    "type": "number",
+                    "title": "stereo_routing"
+                },
+                "velocity_track": {
+                    "type": "number",
+                    "title": "velocity_track"
+                },
+                "view_spectrogram": {
+                    "type": "number",
+                    "title": "view_spectrogram"
+                },
+                "voice_amplitude": {
+                    "type": "number",
+                    "title": "voice_amplitude"
+                },
+                "voice_override": {
+                    "type": "number",
+                    "title": "voice_override"
+                },
+                "voice_priority": {
+                    "type": "number",
+                    "title": "voice_priority"
+                },
+                "voice_transpose": {
+                    "type": "number",
+                    "title": "voice_transpose"
+                },
+                "voice_tune": {
+                    "type": "number",
+                    "title": "voice_tune"
+                },
+                "volume": {
+                    "type": "number",
+                    "title": "volume"
+                },
+                "wavetables": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Wavetable"
+                    },
+                    "title": "wavetables"
+                },
+                "chorus_damping": {
+                    "type": "number",
+                    "title": "chorus_damping"
+                }
+            },
+            "required": [
+                "beats_per_minute",
+                "chorus_delay_1",
+                "chorus_delay_2",
+                "chorus_dry_wet",
+                "chorus_feedback",
+                "chorus_frequency",
+                "chorus_mod_depth",
+                "chorus_on",
+                "chorus_sync",
+                "chorus_tempo",
+                "chorus_voices",
+                "compressor_attack",
+                "compressor_band_gain",
+                "compressor_band_lower_ratio",
+                "compressor_band_lower_threshold",
+                "compressor_band_upper_ratio",
+                "compressor_band_upper_threshold",
+                "compressor_enabled_bands",
+                "compressor_high_gain",
+                "compressor_high_lower_ratio",
+                "compressor_high_lower_threshold",
+                "compressor_high_upper_ratio",
+                "compressor_high_upper_threshold",
+                "compressor_low_gain",
+                "compressor_low_lower_ratio",
+                "compressor_low_lower_threshold",
+                "compressor_low_upper_ratio",
+                "compressor_low_upper_threshold",
+                "compressor_on",
+                "compressor_release",
+                "delay_aux_frequency",
+                "delay_aux_sync",
+                "delay_aux_tempo",
+                "delay_dry_wet",
+                "delay_feedback",
+                "delay_filter_cutoff",
+                "delay_filter_spread",
+                "delay_frequency",
+                "delay_on",
+                "delay_style",
+                "delay_sync",
+                "delay_tempo",
+                "distortion_drive",
+                "distortion_filter_blend",
+                "distortion_filter_cutoff",
+                "distortion_filter_order",
+                "distortion_filter_resonance",
+                "distortion_mix",
+                "distortion_on",
+                "distortion_type",
+                "effect_chain_order",
+                "env_1_attack",
+                "env_1_attack_power",
+                "env_1_decay",
+                "env_1_decay_power",
+                "env_1_delay",
+                "env_1_hold",
+                "env_1_release",
+                "env_1_release_power",
+                "env_1_sustain",
+                "env_2_attack",
+                "env_2_attack_power",
+                "env_2_decay",
+                "env_2_decay_power",
+                "env_2_delay",
+                "env_2_hold",
+                "env_2_release",
+                "env_2_release_power",
+                "env_2_sustain",
+                "env_3_attack",
+                "env_3_attack_power",
+                "env_3_decay",
+                "env_3_decay_power",
+                "env_3_delay",
+                "env_3_hold",
+                "env_3_release",
+                "env_3_release_power",
+                "env_3_sustain",
+                "env_4_attack",
+                "env_4_attack_power",
+                "env_4_decay",
+                "env_4_decay_power",
+                "env_4_delay",
+                "env_4_hold",
+                "env_4_release",
+                "env_4_release_power",
+                "env_4_sustain",
+                "env_5_attack",
+                "env_5_attack_power",
+                "env_5_decay",
+                "env_5_decay_power",
+                "env_5_delay",
+                "env_5_hold",
+                "env_5_release",
+                "env_5_release_power",
+                "env_5_sustain",
+                "env_6_attack",
+                "env_6_attack_power",
+                "env_6_decay",
+                "env_6_decay_power",
+                "env_6_delay",
+                "env_6_hold",
+                "env_6_release",
+                "env_6_release_power",
+                "env_6_sustain",
+                "eq_band_cutoff",
+                "eq_band_gain",
+                "eq_band_mode",
+                "eq_band_resonance",
+                "eq_high_cutoff",
+                "eq_high_gain",
+                "eq_high_mode",
+                "eq_high_resonance",
+                "eq_low_cutoff",
+                "eq_low_gain",
+                "eq_low_mode",
+                "eq_low_resonance",
+                "eq_on",
+                "filter_1_blend",
+                "filter_1_blend_transpose",
+                "filter_1_cutoff",
+                "filter_1_drive",
+                "filter_1_filter_input",
+                "filter_1_formant_resonance",
+                "filter_1_formant_transpose",
+                "filter_1_formant_x",
+                "filter_1_formant_y",
+                "filter_1_keytrack",
+                "filter_1_mix",
+                "filter_1_model",
+                "filter_1_on",
+                "filter_1_resonance",
+                "filter_1_style",
+                "filter_2_blend",
+                "filter_2_blend_transpose",
+                "filter_2_cutoff",
+                "filter_2_drive",
+                "filter_2_filter_input",
+                "filter_2_formant_resonance",
+                "filter_2_formant_transpose",
+                "filter_2_formant_x",
+                "filter_2_formant_y",
+                "filter_2_keytrack",
+                "filter_2_mix",
+                "filter_2_model",
+                "filter_2_on",
+                "filter_2_resonance",
+                "filter_2_style",
+                "filter_fx_blend",
+                "filter_fx_blend_transpose",
+                "filter_fx_cutoff",
+                "filter_fx_drive",
+                "filter_fx_formant_resonance",
+                "filter_fx_formant_transpose",
+                "filter_fx_formant_x",
+                "filter_fx_formant_y",
+                "filter_fx_keytrack",
+                "filter_fx_mix",
+                "filter_fx_model",
+                "filter_fx_on",
+                "filter_fx_resonance",
+                "filter_fx_style",
+                "flanger_center",
+                "flanger_dry_wet",
+                "flanger_feedback",
+                "flanger_frequency",
+                "flanger_mod_depth",
+                "flanger_on",
+                "flanger_phase_offset",
+                "flanger_sync",
+                "flanger_tempo",
+                "legato",
+                "lfo_1_delay_time",
+                "lfo_1_fade_time",
+                "lfo_1_frequency",
+                "lfo_1_phase",
+                "lfo_1_stereo",
+                "lfo_1_sync",
+                "lfo_1_sync_type",
+                "lfo_1_tempo",
+                "lfo_2_delay_time",
+                "lfo_2_fade_time",
+                "lfo_2_frequency",
+                "lfo_2_phase",
+                "lfo_2_stereo",
+                "lfo_2_sync",
+                "lfo_2_sync_type",
+                "lfo_2_tempo",
+                "lfo_3_delay_time",
+                "lfo_3_fade_time",
+                "lfo_3_frequency",
+                "lfo_3_phase",
+                "lfo_3_stereo",
+                "lfo_3_sync",
+                "lfo_3_sync_type",
+                "lfo_3_tempo",
+                "lfo_4_delay_time",
+                "lfo_4_fade_time",
+                "lfo_4_frequency",
+                "lfo_4_phase",
+                "lfo_4_stereo",
+                "lfo_4_sync",
+                "lfo_4_sync_type",
+                "lfo_4_tempo",
+                "lfo_5_delay_time",
+                "lfo_5_fade_time",
+                "lfo_5_frequency",
+                "lfo_5_phase",
+                "lfo_5_stereo",
+                "lfo_5_sync",
+                "lfo_5_sync_type",
+                "lfo_5_tempo",
+                "lfo_6_delay_time",
+                "lfo_6_fade_time",
+                "lfo_6_frequency",
+                "lfo_6_phase",
+                "lfo_6_stereo",
+                "lfo_6_sync",
+                "lfo_6_sync_type",
+                "lfo_6_tempo",
+                "lfo_7_delay_time",
+                "lfo_7_fade_time",
+                "lfo_7_frequency",
+                "lfo_7_phase",
+                "lfo_7_stereo",
+                "lfo_7_sync",
+                "lfo_7_sync_type",
+                "lfo_7_tempo",
+                "lfo_8_delay_time",
+                "lfo_8_fade_time",
+                "lfo_8_frequency",
+                "lfo_8_phase",
+                "lfo_8_stereo",
+                "lfo_8_sync",
+                "lfo_8_sync_type",
+                "lfo_8_tempo",
+                "lfos",
+                "macro_control_1",
+                "macro_control_2",
+                "macro_control_3",
+                "macro_control_4",
+                "mod_wheel",
+                "modulation_10_amount",
+                "modulation_10_bipolar",
+                "modulation_10_bypass",
+                "modulation_10_power",
+                "modulation_10_stereo",
+                "modulation_11_amount",
+                "modulation_11_bipolar",
+                "modulation_11_bypass",
+                "modulation_11_power",
+                "modulation_11_stereo",
+                "modulation_12_amount",
+                "modulation_12_bipolar",
+                "modulation_12_bypass",
+                "modulation_12_power",
+                "modulation_12_stereo",
+                "modulation_13_amount",
+                "modulation_13_bipolar",
+                "modulation_13_bypass",
+                "modulation_13_power",
+                "modulation_13_stereo",
+                "modulation_14_amount",
+                "modulation_14_bipolar",
+                "modulation_14_bypass",
+                "modulation_14_power",
+                "modulation_14_stereo",
+                "modulation_15_amount",
+                "modulation_15_bipolar",
+                "modulation_15_bypass",
+                "modulation_15_power",
+                "modulation_15_stereo",
+                "modulation_16_amount",
+                "modulation_16_bipolar",
+                "modulation_16_bypass",
+                "modulation_16_power",
+                "modulation_16_stereo",
+                "modulation_17_amount",
+                "modulation_17_bipolar",
+                "modulation_17_bypass",
+                "modulation_17_power",
+                "modulation_17_stereo",
+                "modulation_18_amount",
+                "modulation_18_bipolar",
+                "modulation_18_bypass",
+                "modulation_18_power",
+                "modulation_18_stereo",
+                "modulation_19_amount",
+                "modulation_19_bipolar",
+                "modulation_19_bypass",
+                "modulation_19_power",
+                "modulation_19_stereo",
+                "modulation_1_amount",
+                "modulation_1_bipolar",
+                "modulation_1_bypass",
+                "modulation_1_power",
+                "modulation_1_stereo",
+                "modulation_20_amount",
+                "modulation_20_bipolar",
+                "modulation_20_bypass",
+                "modulation_20_power",
+                "modulation_20_stereo",
+                "modulation_21_amount",
+                "modulation_21_bipolar",
+                "modulation_21_bypass",
+                "modulation_21_power",
+                "modulation_21_stereo",
+                "modulation_22_amount",
+                "modulation_22_bipolar",
+                "modulation_22_bypass",
+                "modulation_22_power",
+                "modulation_22_stereo",
+                "modulation_23_amount",
+                "modulation_23_bipolar",
+                "modulation_23_bypass",
+                "modulation_23_power",
+                "modulation_23_stereo",
+                "modulation_24_amount",
+                "modulation_24_bipolar",
+                "modulation_24_bypass",
+                "modulation_24_power",
+                "modulation_24_stereo",
+                "modulation_25_amount",
+                "modulation_25_bipolar",
+                "modulation_25_bypass",
+                "modulation_25_power",
+                "modulation_25_stereo",
+                "modulation_26_amount",
+                "modulation_26_bipolar",
+                "modulation_26_bypass",
+                "modulation_26_power",
+                "modulation_26_stereo",
+                "modulation_27_amount",
+                "modulation_27_bipolar",
+                "modulation_27_bypass",
+                "modulation_27_power",
+                "modulation_27_stereo",
+                "modulation_28_amount",
+                "modulation_28_bipolar",
+                "modulation_28_bypass",
+                "modulation_28_power",
+                "modulation_28_stereo",
+                "modulation_29_amount",
+                "modulation_29_bipolar",
+                "modulation_29_bypass",
+                "modulation_29_power",
+                "modulation_29_stereo",
+                "modulation_2_amount",
+                "modulation_2_bipolar",
+                "modulation_2_bypass",
+                "modulation_2_power",
+                "modulation_2_stereo",
+                "modulation_30_amount",
+                "modulation_30_bipolar",
+                "modulation_30_bypass",
+                "modulation_30_power",
+                "modulation_30_stereo",
+                "modulation_31_amount",
+                "modulation_31_bipolar",
+                "modulation_31_bypass",
+                "modulation_31_power",
+                "modulation_31_stereo",
+                "modulation_32_amount",
+                "modulation_32_bipolar",
+                "modulation_32_bypass",
+                "modulation_32_power",
+                "modulation_32_stereo",
+                "modulation_33_amount",
+                "modulation_33_bipolar",
+                "modulation_33_bypass",
+                "modulation_33_power",
+                "modulation_33_stereo",
+                "modulation_34_amount",
+                "modulation_34_bipolar",
+                "modulation_34_bypass",
+                "modulation_34_power",
+                "modulation_34_stereo",
+                "modulation_35_amount",
+                "modulation_35_bipolar",
+                "modulation_35_bypass",
+                "modulation_35_power",
+                "modulation_35_stereo",
+                "modulation_36_amount",
+                "modulation_36_bipolar",
+                "modulation_36_bypass",
+                "modulation_36_power",
+                "modulation_36_stereo",
+                "modulation_37_amount",
+                "modulation_37_bipolar",
+                "modulation_37_bypass",
+                "modulation_37_power",
+                "modulation_37_stereo",
+                "modulation_38_amount",
+                "modulation_38_bipolar",
+                "modulation_38_bypass",
+                "modulation_38_power",
+                "modulation_38_stereo",
+                "modulation_39_amount",
+                "modulation_39_bipolar",
+                "modulation_39_bypass",
+                "modulation_39_power",
+                "modulation_39_stereo",
+                "modulation_3_amount",
+                "modulation_3_bipolar",
+                "modulation_3_bypass",
+                "modulation_3_power",
+                "modulation_3_stereo",
+                "modulation_40_amount",
+                "modulation_40_bipolar",
+                "modulation_40_bypass",
+                "modulation_40_power",
+                "modulation_40_stereo",
+                "modulation_41_amount",
+                "modulation_41_bipolar",
+                "modulation_41_bypass",
+                "modulation_41_power",
+                "modulation_41_stereo",
+                "modulation_42_amount",
+                "modulation_42_bipolar",
+                "modulation_42_bypass",
+                "modulation_42_power",
+                "modulation_42_stereo",
+                "modulation_43_amount",
+                "modulation_43_bipolar",
+                "modulation_43_bypass",
+                "modulation_43_power",
+                "modulation_43_stereo",
+                "modulation_44_amount",
+                "modulation_44_bipolar",
+                "modulation_44_bypass",
+                "modulation_44_power",
+                "modulation_44_stereo",
+                "modulation_45_amount",
+                "modulation_45_bipolar",
+                "modulation_45_bypass",
+                "modulation_45_power",
+                "modulation_45_stereo",
+                "modulation_46_amount",
+                "modulation_46_bipolar",
+                "modulation_46_bypass",
+                "modulation_46_power",
+                "modulation_46_stereo",
+                "modulation_47_amount",
+                "modulation_47_bipolar",
+                "modulation_47_bypass",
+                "modulation_47_power",
+                "modulation_47_stereo",
+                "modulation_48_amount",
+                "modulation_48_bipolar",
+                "modulation_48_bypass",
+                "modulation_48_power",
+                "modulation_48_stereo",
+                "modulation_49_amount",
+                "modulation_49_bipolar",
+                "modulation_49_bypass",
+                "modulation_49_power",
+                "modulation_49_stereo",
+                "modulation_4_amount",
+                "modulation_4_bipolar",
+                "modulation_4_bypass",
+                "modulation_4_power",
+                "modulation_4_stereo",
+                "modulation_50_amount",
+                "modulation_50_bipolar",
+                "modulation_50_bypass",
+                "modulation_50_power",
+                "modulation_50_stereo",
+                "modulation_51_amount",
+                "modulation_51_bipolar",
+                "modulation_51_bypass",
+                "modulation_51_power",
+                "modulation_51_stereo",
+                "modulation_52_amount",
+                "modulation_52_bipolar",
+                "modulation_52_bypass",
+                "modulation_52_power",
+                "modulation_52_stereo",
+                "modulation_53_amount",
+                "modulation_53_bipolar",
+                "modulation_53_bypass",
+                "modulation_53_power",
+                "modulation_53_stereo",
+                "modulation_54_amount",
+                "modulation_54_bipolar",
+                "modulation_54_bypass",
+                "modulation_54_power",
+                "modulation_54_stereo",
+                "modulation_55_amount",
+                "modulation_55_bipolar",
+                "modulation_55_bypass",
+                "modulation_55_power",
+                "modulation_55_stereo",
+                "modulation_56_amount",
+                "modulation_56_bipolar",
+                "modulation_56_bypass",
+                "modulation_56_power",
+                "modulation_56_stereo",
+                "modulation_57_amount",
+                "modulation_57_bipolar",
+                "modulation_57_bypass",
+                "modulation_57_power",
+                "modulation_57_stereo",
+                "modulation_58_amount",
+                "modulation_58_bipolar",
+                "modulation_58_bypass",
+                "modulation_58_power",
+                "modulation_58_stereo",
+                "modulation_59_amount",
+                "modulation_59_bipolar",
+                "modulation_59_bypass",
+                "modulation_59_power",
+                "modulation_59_stereo",
+                "modulation_5_amount",
+                "modulation_5_bipolar",
+                "modulation_5_bypass",
+                "modulation_5_power",
+                "modulation_5_stereo",
+                "modulation_60_amount",
+                "modulation_60_bipolar",
+                "modulation_60_bypass",
+                "modulation_60_power",
+                "modulation_60_stereo",
+                "modulation_61_amount",
+                "modulation_61_bipolar",
+                "modulation_61_bypass",
+                "modulation_61_power",
+                "modulation_61_stereo",
+                "modulation_62_amount",
+                "modulation_62_bipolar",
+                "modulation_62_bypass",
+                "modulation_62_power",
+                "modulation_62_stereo",
+                "modulation_63_amount",
+                "modulation_63_bipolar",
+                "modulation_63_bypass",
+                "modulation_63_power",
+                "modulation_63_stereo",
+                "modulation_64_amount",
+                "modulation_64_bipolar",
+                "modulation_64_bypass",
+                "modulation_64_power",
+                "modulation_64_stereo",
+                "modulation_6_amount",
+                "modulation_6_bipolar",
+                "modulation_6_bypass",
+                "modulation_6_power",
+                "modulation_6_stereo",
+                "modulation_7_amount",
+                "modulation_7_bipolar",
+                "modulation_7_bypass",
+                "modulation_7_power",
+                "modulation_7_stereo",
+                "modulation_8_amount",
+                "modulation_8_bipolar",
+                "modulation_8_bypass",
+                "modulation_8_power",
+                "modulation_8_stereo",
+                "modulation_9_amount",
+                "modulation_9_bipolar",
+                "modulation_9_bypass",
+                "modulation_9_power",
+                "modulation_9_stereo",
+                "modulations",
+                "osc_1_destination",
+                "osc_1_detune_power",
+                "osc_1_detune_range",
+                "osc_1_distortion_amount",
+                "osc_1_distortion_phase",
+                "osc_1_distortion_spread",
+                "osc_1_distortion_type",
+                "osc_1_frame_spread",
+                "osc_1_level",
+                "osc_1_midi_track",
+                "osc_1_on",
+                "osc_1_pan",
+                "osc_1_phase",
+                "osc_1_random_phase",
+                "osc_1_smooth_interpolation",
+                "osc_1_spectral_morph_amount",
+                "osc_1_spectral_morph_spread",
+                "osc_1_spectral_morph_type",
+                "osc_1_spectral_unison",
+                "osc_1_stack_style",
+                "osc_1_stereo_spread",
+                "osc_1_transpose",
+                "osc_1_transpose_quantize",
+                "osc_1_tune",
+                "osc_1_unison_blend",
+                "osc_1_unison_detune",
+                "osc_1_unison_voices",
+                "osc_1_view_2d",
+                "osc_1_wave_frame",
+                "osc_2_destination",
+                "osc_2_detune_power",
+                "osc_2_detune_range",
+                "osc_2_distortion_amount",
+                "osc_2_distortion_phase",
+                "osc_2_distortion_spread",
+                "osc_2_distortion_type",
+                "osc_2_frame_spread",
+                "osc_2_level",
+                "osc_2_midi_track",
+                "osc_2_on",
+                "osc_2_pan",
+                "osc_2_phase",
+                "osc_2_random_phase",
+                "osc_2_smooth_interpolation",
+                "osc_2_spectral_morph_amount",
+                "osc_2_spectral_morph_spread",
+                "osc_2_spectral_morph_type",
+                "osc_2_spectral_unison",
+                "osc_2_stack_style",
+                "osc_2_stereo_spread",
+                "osc_2_transpose",
+                "osc_2_transpose_quantize",
+                "osc_2_tune",
+                "osc_2_unison_blend",
+                "osc_2_unison_detune",
+                "osc_2_unison_voices",
+                "osc_2_view_2d",
+                "osc_2_wave_frame",
+                "osc_3_destination",
+                "osc_3_detune_power",
+                "osc_3_detune_range",
+                "osc_3_distortion_amount",
+                "osc_3_distortion_phase",
+                "osc_3_distortion_spread",
+                "osc_3_distortion_type",
+                "osc_3_frame_spread",
+                "osc_3_level",
+                "osc_3_midi_track",
+                "osc_3_on",
+                "osc_3_pan",
+                "osc_3_phase",
+                "osc_3_random_phase",
+                "osc_3_smooth_interpolation",
+                "osc_3_spectral_morph_amount",
+                "osc_3_spectral_morph_spread",
+                "osc_3_spectral_morph_type",
+                "osc_3_spectral_unison",
+                "osc_3_stack_style",
+                "osc_3_stereo_spread",
+                "osc_3_transpose",
+                "osc_3_transpose_quantize",
+                "osc_3_tune",
+                "osc_3_unison_blend",
+                "osc_3_unison_detune",
+                "osc_3_unison_voices",
+                "osc_3_view_2d",
+                "osc_3_wave_frame",
+                "oversampling",
+                "phaser_blend",
+                "phaser_center",
+                "phaser_dry_wet",
+                "phaser_feedback",
+                "phaser_frequency",
+                "phaser_mod_depth",
+                "phaser_on",
+                "phaser_phase_offset",
+                "phaser_sync",
+                "phaser_tempo",
+                "pitch_bend_range",
+                "pitch_wheel",
+                "polyphony",
+                "portamento_force",
+                "portamento_scale",
+                "portamento_slope",
+                "portamento_time",
+                "random_1_frequency",
+                "random_1_stereo",
+                "random_1_style",
+                "random_1_sync",
+                "random_1_sync_type",
+                "random_1_tempo",
+                "random_2_frequency",
+                "random_2_stereo",
+                "random_2_style",
+                "random_2_sync",
+                "random_2_sync_type",
+                "random_2_tempo",
+                "random_3_frequency",
+                "random_3_stereo",
+                "random_3_style",
+                "random_3_sync",
+                "random_3_sync_type",
+                "random_3_tempo",
+                "random_4_frequency",
+                "random_4_stereo",
+                "random_4_style",
+                "random_4_sync",
+                "random_4_sync_type",
+                "random_4_tempo",
+                "reverb_chorus_amount",
+                "reverb_chorus_frequency",
+                "reverb_decay_time",
+                "reverb_dry_wet",
+                "reverb_high_shelf_cutoff",
+                "reverb_high_shelf_gain",
+                "reverb_low_shelf_cutoff",
+                "reverb_low_shelf_gain",
+                "reverb_on",
+                "reverb_pre_high_cutoff",
+                "reverb_pre_low_cutoff",
+                "reverb_size",
+                "sample",
+                "sample_destination",
+                "sample_keytrack",
+                "sample_level",
+                "sample_loop",
+                "sample_on",
+                "sample_pan",
+                "sample_random_phase",
+                "sample_transpose",
+                "sample_transpose_quantize",
+                "sample_tune",
+                "stereo_routing",
+                "velocity_track",
+                "voice_amplitude",
+                "voice_priority",
+                "voice_tune",
+                "volume",
+                "wavetables"
+            ]
+        },
+        "LFO": {
+            "title": "LFO",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "name"
+                },
+                "num_points": {
+                    "type": "number",
+                    "title": "num_points"
+                },
+                "points": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "title": "points"
+                },
+                "powers": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "title": "powers"
+                },
+                "smooth": {
+                    "type": "boolean",
+                    "title": "smooth"
+                }
+            },
+            "required": [
+                "name",
+                "num_points",
+                "points",
+                "powers",
+                "smooth"
+            ]
+        },
+        "Modulation": {
+            "title": "Modulation",
+            "type": "object",
+            "properties": {
+                "destination": {
+                    "type": "string",
+                    "title": "destination"
+                },
+                "source": {
+                    "$ref": "#/definitions/Source",
+                    "title": "source"
+                },
+                "line_mapping": {
+                    "$ref": "#/definitions/LFO",
+                    "title": "line_mapping"
+                }
+            },
+            "required": [
+                "destination",
+                "source"
+            ]
+        },
+        "Source": {
+            "title": "Source",
+            "enum": [
+                "",
+                "aftertouch",
+                "env_1",
+                "env_2",
+                "env_3",
+                "env_4",
+                "env_5",
+                "env_6",
+                "lfo_1",
+                "lfo_2",
+                "lfo_3",
+                "lfo_4",
+                "lfo_5",
+                "lfo_6",
+                "lfo_7",
+                "lfo_8",
+                "lift",
+                "macro_control_1",
+                "macro_control_2",
+                "macro_control_3",
+                "macro_control_4",
+                "mod_wheel",
+                "note",
+                "note_in_octave",
+                "pitch_wheel",
+                "random",
+                "random_1",
+                "random_2",
+                "random_3",
+                "random_4",
+                "slide",
+                "stereo",
+                "velocity"
+            ],
+            "type": "string"
+        },
+        "Sample": {
+            "title": "Sample",
+            "type": "object",
+            "properties": {
+                "length": {
+                    "type": "number",
+                    "title": "length"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "name"
+                },
+                "sample_rate": {
+                    "type": "number",
+                    "title": "sample_rate"
+                },
+                "samples": {
+                    "type": "string",
+                    "title": "samples"
+                },
+                "samples_stereo": {
+                    "type": "string",
+                    "title": "samples_stereo"
+                }
+            },
+            "required": [
+                "length",
+                "name",
+                "sample_rate",
+                "samples"
+            ]
+        },
+        "Wavetable": {
+            "title": "Wavetable",
+            "type": "object",
+            "properties": {
+                "author": {
+                    "type": "string",
+                    "title": "author"
+                },
+                "full_normalize": {
+                    "type": "boolean",
+                    "title": "full_normalize"
+                },
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Group"
+                    },
+                    "title": "groups"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "name"
+                },
+                "remove_all_dc": {
+                    "type": "boolean",
+                    "title": "remove_all_dc"
+                },
+                "version": {
+                    "type": "string",
+                    "title": "version"
+                }
+            },
+            "required": [
+                "full_normalize",
+                "groups",
+                "name",
+                "remove_all_dc",
+                "version"
+            ]
+        },
+        "Group": {
+            "title": "Group",
+            "type": "object",
+            "properties": {
+                "components": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Component"
+                    },
+                    "title": "components"
+                }
+            },
+            "required": [
+                "components"
+            ]
+        },
+        "Component": {
+            "title": "Component",
+            "type": "object",
+            "properties": {
+                "audio_file": {
+                    "type": "string",
+                    "title": "audio_file"
+                },
+                "audio_sample_rate": {
+                    "type": "number",
+                    "title": "audio_sample_rate"
+                },
+                "fade_style": {
+                    "type": "number",
+                    "title": "fade_style"
+                },
+                "interpolation_style": {
+                    "type": "number",
+                    "title": "interpolation_style"
+                },
+                "keyframes": {
+                    "anyOf": [
+                        {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Keyframe"
+                            }
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "title": "keyframes"
+                },
+                "normalize_gain": {
+                    "type": "boolean",
+                    "title": "normalize_gain"
+                },
+                "normalize_mult": {
+                    "type": "boolean",
+                    "title": "normalize_mult"
+                },
+                "phase_style": {
+                    "type": "number",
+                    "title": "phase_style"
+                },
+                "random_seed": {
+                    "type": "number",
+                    "title": "random_seed"
+                },
+                "type": {
+                    "$ref": "#/definitions/Type",
+                    "title": "type"
+                },
+                "window_size": {
+                    "type": "number",
+                    "title": "window_size"
+                },
+                "interpolation": {
+                    "type": "number",
+                    "title": "interpolation"
+                },
+                "horizontal_asymmetric": {
+                    "type": "boolean",
+                    "title": "horizontal_asymmetric"
+                },
+                "vertical_asymmetric": {
+                    "type": "boolean",
+                    "title": "vertical_asymmetric"
+                },
+                "normalize": {
+                    "type": "boolean",
+                    "title": "normalize"
+                },
+                "style": {
+                    "type": "number",
+                    "title": "style"
+                },
+                "num_points": {
+                    "type": "number",
+                    "title": "num_points"
+                },
+                "window_shape": {
+                    "type": "number",
+                    "title": "window_shape"
+                }
+            },
+            "required": [
+                "interpolation_style",
+                "keyframes",
+                "type"
+            ]
+        },
+        "Keyframe": {
+            "title": "Keyframe",
+            "type": "object",
+            "properties": {
+                "position": {
+                    "type": "number",
+                    "title": "position"
+                },
+                "start_position": {
+                    "type": "number",
+                    "title": "start_position"
+                },
+                "window_fade": {
+                    "type": "number",
+                    "title": "window_fade"
+                },
+                "window_size": {
+                    "type": "number",
+                    "title": "window_size"
+                },
+                "wave_data": {
+                    "type": "string",
+                    "title": "wave_data"
+                },
+                "horizontal_power": {
+                    "type": "number",
+                    "title": "horizontal_power"
+                },
+                "vertical_power": {
+                    "type": "number",
+                    "title": "vertical_power"
+                },
+                "cutoff": {
+                    "type": "number",
+                    "title": "cutoff"
+                },
+                "shape": {
+                    "type": "number",
+                    "title": "shape"
+                },
+                "fold_boost": {
+                    "type": "number",
+                    "title": "fold_boost"
+                },
+                "line": {
+                    "$ref": "#/definitions/LFO",
+                    "title": "line"
+                },
+                "pull_power": {
+                    "type": "number",
+                    "title": "pull_power"
+                },
+                "left_position": {
+                    "type": "number",
+                    "title": "left_position"
+                },
+                "right_position": {
+                    "type": "number",
+                    "title": "right_position"
+                },
+                "down_run_rise": {
+                    "type": "number",
+                    "title": "down_run_rise"
+                },
+                "up_run_rise": {
+                    "type": "number",
+                    "title": "up_run_rise"
+                },
+                "mix": {
+                    "type": "number",
+                    "title": "mix"
+                },
+                "phase": {
+                    "type": "number",
+                    "title": "phase"
+                }
+            },
+            "required": [
+                "position"
+            ]
+        },
+        "Type": {
+            "title": "Type",
+            "enum": [
+                "Audio File Source",
+                "Frequency Filter",
+                "Line Source",
+                "Phase Shift",
+                "Shepard Tone Source",
+                "Slew Limiter",
+                "Wave Folder",
+                "Wave Source",
+                "Wave Warp",
+                "Wave Window"
+            ],
+            "type": "string"
+        }
+    }
+}
